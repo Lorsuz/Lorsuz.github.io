@@ -46,4 +46,4 @@ Here are some ideas to get you started:
 <p align="center">   <img alingn="center" src="https://profile-counter.glitch.me/Lorsuz/count.svg" /></p>
 
 
-**![snake gif](https://github.com/Lorsuz/Lorsuz/blob/output/github-contribution-grid-snake.svg)
+<!--![snake gif](https://github.com/Lorsuz/Lorsuz/blob/output/github-contribution-grid-snake.svg)-->
