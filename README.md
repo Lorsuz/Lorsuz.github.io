@@ -95,56 +95,62 @@ I am Ariel Souza, a passionate coder and language learner. I enjoy various hobbi
 
 # Hard Skills
 
-## Ability
-English (Intermediate)
-UI & UX Design
-Web Structure Planning
-REST API Development
+- Ability
+	- English (Intermediate)
+	- UI & UX Design
+	- Web Structure Planning
+	- REST API Development
 
-## Paradigm
-Object-Oriented Programming (OOP)
-PHP Data Objects (PDO)
-Functional Programming
-Unified Modeling Language (UML)
-Model-View-Controller (MVC)
-## Engine
-Godot & GdScript
-Game Maker & GML
-RPG Maker
-## Environment
-Node.js
+- Paradigm
+	- Object-Oriented Programming (OOP)
+	- PHP Data Objects (PDO)
+	- Functional Programming
+	- Unified Modeling Language (UML)
+	- Model-View-Controller (MVC)
 
-## Dev Tools
-WordPress
-Figma
-Git & Github
+- Engine
+	- Godot & GdScript
+	- Game Maker & GML
+	- RPG Maker
 
-## Markup Language
-HTML
-CSS
+- Environment
+	- Node.js
+	- PHP for Laravel
 
-## Database Management System
-FireBird
-MySQL
-SQLite
+- Dev Tool
+	- Figma
+	- Git & Github
 
-## Library
-React.js
-Ajax
-JQuery
+- Markup Language
+	- HTML
+	- CSS
 
-## Programming Language
-C & C++
-PHP
-Python
-SASS
-Portugol
-Java
+- Database Management System
+	- FireBird
+	- MySQL
+	- SQLite
 
-## FrameWork
-Laravel
-Tailwind
-Bootstrap
+- Library
+	- React.js
+	- Ajax
+	- JQuery
+
+- Programming Language
+	- C & C++
+	- PHP
+	- Python
+	- SASS
+	- Portugol
+	- Java
+
+- FrameWork
+	- Tailwind
+	- Bootstrap
+	- Express
+	- Laravel
+
+- Content Management System (CMS)
+	- WordPress
 
 # Services
 ## What I Do
