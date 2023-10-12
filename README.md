@@ -94,11 +94,57 @@ I am Ariel Souza, a passionate coder and language learner. I enjoy various hobbi
 - Collaborative Team Projects
 
 # Hard Skills
-	- Name
-	- Level
-	- Image
-	- Description
-	- Attributes
+
+## Ability
+English (Intermediate)
+UI & UX Design
+Web Structure Planning
+REST API Development
+
+## Paradigm
+Object-Oriented Programming (OOP)
+PHP Data Objects (PDO)
+Functional Programming
+Unified Modeling Language (UML)
+Model-View-Controller (MVC)
+## Engine
+Godot & GdScript
+Game Maker & GML
+RPG Maker
+## Environment
+Node.js
+
+## Dev Tools
+WordPress
+Figma
+Git & Github
+
+## Markup Language
+HTML
+CSS
+
+## Database Management System
+FireBird
+MySQL
+SQLite
+
+## Library
+React.js
+Ajax
+JQuery
+
+## Programming Language
+C & C++
+PHP
+Python
+SASS
+Portugol
+Java
+
+## FrameWork
+Laravel
+Tailwind
+Bootstrap
 
 # Services
 ## What I Do
