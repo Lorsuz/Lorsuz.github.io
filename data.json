@@ -374,6 +374,28 @@
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
 			"repository": "mr-pet",
 			"pages": ""
+		},
+		{
+			"project": "Progress Random",
+			"image": "progress-random.png",
+			"skills": [
+				"HTML",
+				"CSS"
+			],
+			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"repository": "progress-random",
+			"pages": ""
+		},
+		{
+			"project": "Infosion",
+			"image": "infosion.png",
+			"skills": [
+				"HTML",
+				"CSS"
+			],
+			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"repository": "infosion",
+			"pages": ""
 		}
 	]
 }
