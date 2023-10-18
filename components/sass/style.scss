@@ -13,10 +13,6 @@
 	// --skin-color: #708090;
 }
 
-* {
-	transition: 300ms;
-}
-
 button {
 	cursor: pointer;
 
@@ -41,6 +37,8 @@ button {
 	box-sizing: border-box;
 	list-style: none;
 	font-family: "poppins", sans-serif;
+	transition: 300ms;
+	// outline: 1px dotted var(--text-main);
 }
 
 body {
@@ -711,7 +709,7 @@ body {
 										transition: opacity 0ms 0ms;
 									}
 
-									.dots {
+									.dots-container {
 										height: 30px;
 										display: flex;
 										justify-content: center;
@@ -1039,6 +1037,8 @@ body {
 							.links {
 								display: flex;
 								justify-content: space-between;
+								align-items: center;
+								height: 50px;
 
 								a {
 									width: 45%;
@@ -1049,11 +1049,18 @@ body {
 									border-radius: 5px;
 									color: var(--background-max);
 									text-align: center;
-									margin: 0 auto 20px;
+									margin: 0 auto;
 
 									&:hover {
 										background: var(--text-main);
 									}
+								}
+								span{
+									display: block;
+									margin: auto;
+									color: var(--skin-color);
+									font-size: 1rem;
+									font-weight: bold;
 								}
 							}
 						}

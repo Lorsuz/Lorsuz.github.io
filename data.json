@@ -45,6 +45,36 @@
 			"pages": ""
 		},
 		{
+			"area": "aloppooy",
+			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"repository": "",
+			"pages": ""
+		},
+		{
+			"area": "aloppooy",
+			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"repository": "",
+			"pages": ""
+		},
+		{
+			"area": "aloppooy",
+			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"repository": "",
+			"pages": ""
+		},
+		{
+			"area": "aloppooy",
+			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"repository": "",
+			"pages": ""
+		},
+		{
+			"area": "aloppooy",
+			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"repository": "",
+			"pages": ""
+		},
+		{
 			"area": "algergergre",
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
 			"repository": "",
@@ -362,7 +392,7 @@
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
 			"repository": "progress-circle",
-			"pages": ""
+			"pages": "progress-circle"
 		},
 		{
 			"project": "Mr. Pet",
@@ -372,7 +402,7 @@
 				"CSS"
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-			"repository": "mr-pet",
+			"repository": "",
 			"pages": ""
 		},
 		{
@@ -383,7 +413,7 @@
 				"CSS"
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-			"repository": "progress-random",
+			"repository": "",
 			"pages": ""
 		},
 		{
@@ -394,7 +424,18 @@
 				"CSS"
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-			"repository": "infosion",
+			"repository": "",
+			"pages": ""
+		},
+		{
+			"project": "BuyCity",
+			"image": "buycity.png",
+			"skills": [
+				"HTML",
+				"CSS"
+			],
+			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"repository": "",
 			"pages": ""
 		}
 	]
