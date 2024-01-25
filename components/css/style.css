@@ -7,7 +7,7 @@
   --background-min: #e8dfec;
   --text-main: #302e4d;
   --text-sub: #504e70;
-  --skin-color: #ec1839;
+  --skin-color: #004aad;
 }
 
 button {
@@ -408,6 +408,7 @@ body main section.home .container .left blockquote {
 }
 body main section.home .container .left blockquote q {
   color: var(--text-main);
+  display: block;
 }
 body main section.home .container .left blockquote cite {
   color: var(--text-sub);
@@ -448,17 +449,16 @@ body main section.home .container .right .img::after {
 body main section.home .container .right .img .overflow {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  border: 5px solid var(--background-min);
 }
 body main section.home .container .right .img img {
   width: 160%;
   height: 100%;
   border-radius: 5px;
+  filter: drop-shadow(0px 0px 5px #fff);
 }
 body main section.home .container .right .links .link {
   margin: 10px;
