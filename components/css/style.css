@@ -539,14 +539,21 @@ body main section.about .container .geral-data .data-self .btn a {
   border-radius: 50px;
   border: none;
   background: var(--skin-color);
+  color: var(--background-middle);
+  transition: all 300ms ease;
+  opacity: 0.8;
+}
+body main section.about .container .geral-data .data-self .btn a i {
+  margin-right: 10px;
+  font-size: 22px;
+}
+body main section.about .container .geral-data .data-self .btn a span {
   font-size: 18px;
   font-weight: 500;
-  color: var(--background-middle);
   white-space: nowrap;
-  transition: all 300ms ease;
 }
 body main section.about .container .geral-data .data-self .btn a:hover {
-  scale: 1.05;
+  opacity: 1;
 }
 body main section.about .container .geral-data .data-self .education h3 {
   margin-bottom: 20px;
@@ -751,6 +758,7 @@ body main section.about .container .geral-data .hardSkills > span {
   display: block;
   margin-bottom: 20px;
   color: var(--text-sub);
+  text-align: center;
 }
 body main section.about .container .geral-data .hardSkills #hardSkills-container > h4 {
   margin-bottom: 10px;
@@ -816,6 +824,38 @@ body main section.about .container .geral-data .hardSkills #hardSkills-container
 body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value {
   background: var(--skin-color);
   height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::after, body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::before {
+  content: "";
+  background: var(--skin-color);
+  position: absolute;
+  left: 93%;
+  transform-origin: center;
+  transition: 300ms;
+}
+body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::after {
+  animation: flip 1.5s infinite linear;
+  width: 35px;
+  height: 35px;
+  border-radius: 35%;
+  opacity: 0.5;
+}
+body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::before {
+  animation: flip 2s infinite reverse linear;
+  width: 30px;
+  height: 30px;
+  border-radius: 40%;
+}
+@keyframes flip {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
 body main section.services #services-container {
   display: flex;
