@@ -319,10 +319,10 @@ body {
 				background: var(--skin-color);
 			}
 
-			>.container {
+			> .container {
 				padding: 20px 0px 50px 0;
 
-				>h1 {
+				> h1 {
 					font-size: 40px;
 					color: var(--text-main);
 					margin-bottom: 50px;
@@ -404,7 +404,7 @@ body {
 							line-height: 1.5rem;
 						}
 
-						>a {
+						> a {
 							display: inline-block;
 							padding: 12px 60px;
 							// border-radius: 50px;
@@ -601,10 +601,10 @@ body {
 			}
 
 			&.about {
-				>.container {
+				> .container {
 					padding: 20px 30px 150px 0;
 
-					>p {
+					> p {
 						color: var(--text-sub);
 						margin-bottom: 30px;
 						text-align: justify;
@@ -660,17 +660,19 @@ body {
 									color: var(--background-middle);
 									transition: all 300ms ease;
 									opacity: 0.8;
-									i{
+
+									i {
 										margin-right: 10px;
 										font-size: 22px;
-										
+
 									}
-									span{
+
+									span {
 										font-size: 18px;
 										font-weight: 500;
 										white-space: nowrap;
 									}
-									
+
 									&:hover {
 										opacity: 1;
 									}
@@ -815,9 +817,13 @@ body {
 										padding: 10px 5px;
 
 										&:hover {
-											>i {
+											> i {
 												font-size: 40px;
 											}
+										}
+										&.blocked {
+											opacity: 0.5;
+											pointer-events: none;
 										}
 
 										i {
@@ -855,9 +861,25 @@ body {
 											margin-bottom: 10px;
 										}
 
-										p {
-											text-align: justify;
-											color: var(--text-sub);
+										.description {
+											display: flex;
+											gap: 20px;
+
+											.icon {
+												display: flex;
+												justify-content: center;
+												align-items: center;
+
+												i {
+													color: var(--skin-color);
+													font-size: 7rem;
+												}
+											}
+
+											p {
+												text-align: justify;
+												color: var(--text-sub);
+											}
 										}
 									}
 
@@ -883,7 +905,7 @@ body {
 									}
 
 									.dots-container {
-										height: 30px;
+										height: 15px;
 										display: flex;
 										justify-content: center;
 										align-items: center;
@@ -891,7 +913,8 @@ body {
 										.dot {
 											width: 15px;
 											height: 15px;
-											border: 2px solid var(--skin-color);
+											// border: 2px solid var(--skin-color);
+											background: var(--background-min);
 											margin: 0 10px;
 											border-radius: 50%;
 											cursor: pointer;
@@ -915,22 +938,23 @@ body {
 								color: var(--text-main);
 							}
 
-							>span {
+							> span {
 								display: block;
 								margin-bottom: 20px;
 								color: var(--text-sub);
 								text-align: center;
+								font-weight: bold;
 							}
 
 							#hardSkills-container {
-								>h4 {
+								> h4 {
 									margin-bottom: 10px;
 									font-size: 20px;
 									color: var(--skin-color);
 									text-decoration: underline;
 								}
 
-								>ul {
+								> ul {
 									margin-bottom: 15px;
 									border-bottom: 1px solid var(--background-min);
 
@@ -1001,40 +1025,46 @@ body {
 												.progress-value {
 													background: var(--skin-color);
 													height: 100%;
-													
+
 													position: relative;
 													display: flex;
 													align-items: center;
 
-													&::after, &::before{
+													&::after,
+													&::before {
 														content: '';
 														background: var(--skin-color);
 														position: absolute;
 														left: 93%;
 														transform-origin: center;
 														transition: 300ms;
-														
+
 													}
-													&::after{
-														
+
+													&::after {
+
 
 														animation: flip 1.5s infinite linear;
 														width: 35px;
 														height: 35px;
 														border-radius: 35%;
 														opacity: 0.5;
-														
-													} &::before{
+
+													}
+
+													&::before {
 														animation: flip 2s infinite reverse linear;
 														width: 30px;
 														height: 30px;
 														border-radius: 40%;
-														
+
 													}
+
 													@keyframes flip {
 														0% {
 															transform: rotate(0deg);
 														}
+
 														100% {
 															transform: rotate(180deg);
 														}

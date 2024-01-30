@@ -13,7 +13,12 @@ async function fetchData () {
 				` 
         <li class="slides-pag ${ index == 0 ? "active" : "" }">
           <h4>${ card.area }</h4>
-          <p>${ card.description }</p>
+						<div class="description">
+							<div class="icon">
+								<i class="${card.icon}"></i>
+							</div>
+							<p>${ card.description }</p>
+						</div>
         </li>
         `;
 			dotsContainer.innerHTML += `<li class="dot ${ index == 0 ? "active" : "" }"></li>`;

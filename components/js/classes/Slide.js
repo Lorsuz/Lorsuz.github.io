@@ -6,6 +6,7 @@ export default class Slide {
 	slideCurrent = 0;
 	totalSlides;
 	interval;
+	animationIsRunning = false;
 
 	constructor ( slides, prev, next, dots ) {
 		this.slides = document.querySelectorAll( slides );
@@ -45,6 +46,7 @@ export default class Slide {
 		}
 		this.animationEffect( this.slideCurrent, index, value );
 		this.changeSlideCurrent( index );
+		
 	}
 
 	animationEffect ( slideCurrent, index, value = 0 ) {
@@ -61,7 +63,6 @@ export default class Slide {
 			this.slides[ slideCurrent ].classList.add( "toLeftOld" );
 			this.slides[ index ].classList.add( "toLeftNew" );
 		}
-
 	}
 
 	changeSlideCurrent ( index ) {
