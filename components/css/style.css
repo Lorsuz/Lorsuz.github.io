@@ -38,13 +38,14 @@ button i {
 
 body {
   line-height: 1.5;
+  min-height: 100dvh;
   font-size: 16px;
   overflow-x: hidden;
   min-width: 1280px;
   max-width: 2000px;
   margin: 0 auto;
 }
-body .dot-in {
+body .dot-cursor .dot-in {
   width: 6px;
   aspect-ratio: 1;
   position: absolute;
@@ -55,7 +56,7 @@ body .dot-in {
   z-index: 1000;
   transition: all 500ms, transform 50ms ease;
 }
-body .dot-out {
+body .dot-cursor .dot-out {
   width: 30px;
   aspect-ratio: 1;
   position: absolute;
@@ -66,7 +67,7 @@ body .dot-out {
   z-index: 1000;
   transition: all 500ms, transform 100ms ease;
 }
-body .dot-pointer {
+body .dot-cursor .dot-pointer {
   width: 30px;
   aspect-ratio: 1;
   position: absolute;
@@ -86,7 +87,7 @@ body aside {
   left: 0;
   top: 0;
   border-right: 1px solid var(--background-min);
-  height: 100%;
+  min-height: 100dvh;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -331,8 +332,12 @@ body main section.home .container .left h2 {
   margin-bottom: 10px;
   font-size: 30px;
 }
-body main section.home .container .left h2 span {
+body main section.home .container .left h2 span.typing {
   color: var(--skin-color);
+}
+body main section.home .container .left h2 span.and {
+  font-size: 40px;
+  font-family: "Clicker Script", cursive;
 }
 body main section.home .container .left p {
   margin-bottom: 50px;

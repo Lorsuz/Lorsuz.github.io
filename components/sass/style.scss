@@ -45,48 +45,50 @@ button {
 
 body {
 	line-height: 1.5;
+	min-height: 100dvh;
 	font-size: 16px;
 	overflow-x: hidden;
 	min-width: 1280px;
 	max-width: 2000px;
 	margin: 0 auto;
-	// position: relative;
 
-	.dot-in {
-		width: 6px;
-		aspect-ratio: 1;
-		position: absolute;
-		transform: translateX(-50%) translateY(-50%);
-		background-color: var(--text-sub);
-		pointer-events: none;
-		border-radius: 50%;
-		z-index: 1000;
-		transition: all 500ms, transform 50ms ease;
-	}
+	.dot-cursor {
+		.dot-in {
+			width: 6px;
+			aspect-ratio: 1;
+			position: absolute;
+			transform: translateX(-50%) translateY(-50%);
+			background-color: var(--text-sub);
+			pointer-events: none;
+			border-radius: 50%;
+			z-index: 1000;
+			transition: all 500ms, transform 50ms ease;
+		}
 
-	.dot-out {
-		width: 30px;
-		aspect-ratio: 1;
-		position: absolute;
-		transform: translateX(-50%) translateY(-50%);
-		border: 2px solid var(--text-sub);
-		pointer-events: none;
-		border-radius: 50%;
-		z-index: 1000;
-		transition: all 500ms, transform 100ms ease;
-	}
+		.dot-out {
+			width: 30px;
+			aspect-ratio: 1;
+			position: absolute;
+			transform: translateX(-50%) translateY(-50%);
+			border: 2px solid var(--text-sub);
+			pointer-events: none;
+			border-radius: 50%;
+			z-index: 1000;
+			transition: all 500ms, transform 100ms ease;
+		}
 
-	.dot-pointer {
-		width: 30px;
-		aspect-ratio: 1;
-		position: absolute;
-		transform: translateX(-50%) translateY(-50%);
-		background: var(--text-sub);
-		pointer-events: none;
-		border-radius: 50%;
-		z-index: 1000;
-		opacity: 0;
-		transition: all 500ms, transform 100ms ease;
+		.dot-pointer {
+			width: 30px;
+			aspect-ratio: 1;
+			position: absolute;
+			transform: translateX(-50%) translateY(-50%);
+			background: var(--text-sub);
+			pointer-events: none;
+			border-radius: 50%;
+			z-index: 1000;
+			opacity: 0;
+			transition: all 500ms, transform 100ms ease;
+		}
 	}
 
 	aside {
@@ -97,7 +99,7 @@ body {
 		left: 0;
 		top: 0;
 		border-right: 1px solid var(--background-min);
-		height: 100%;
+		min-height: 100dvh;
 		z-index: 10;
 		display: flex;
 		justify-content: center;
@@ -397,7 +399,14 @@ body {
 							font-size: 30px;
 
 							span {
-								color: var(--skin-color);
+								&.typing {
+									color: var(--skin-color);
+								}
+
+								&.and {
+									font-size: 40px;
+									font-family: "Clicker Script", cursive;
+								}
 							}
 						}
 
@@ -622,12 +631,14 @@ body {
 						font-size: 25px;
 					}
 
-					.grid-container{
+					.grid-container {
 						display: grid;
 						grid-template-columns: repeat(12, 1fr);
 						gap: 30px;
+
 						.data-self {
 							grid-column: 1/9;
+
 							ul.data {
 								display: flex;
 								justify-content: space-between;
@@ -1082,8 +1093,9 @@ body {
 									}
 								}
 							}
-						}}
-					
+						}
+					}
+
 				}
 			}
 
@@ -1191,19 +1203,23 @@ body {
 							top: -10px;
 							left: -10px;
 						}
-						&::before, &::after{
+
+						&::before,
+						&::after {
 							content: "";
 							position: absolute;
 							width: 60%;
 							height: 3px;
 							background: var(--background-middle);
 							// left: 0;
-							
+
 						}
-						&::before{
+
+						&::before {
 							top: 30%;
 						}
-						&::after{
+
+						&::after {
 							bottom: 30%;
 						}
 					}
@@ -1322,6 +1338,7 @@ body {
 										font-size: 1.2rem;
 
 									}
+
 									&.filled::before {
 										content: "\2605";
 									}
