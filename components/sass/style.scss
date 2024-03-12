@@ -914,14 +914,14 @@ body {
 										display: flex;
 										justify-content: center;
 										align-items: center;
+										// gap: 1px;
 
 										.dot {
-											width: 15px;
-											height: 15px;
+											width: 50px;
+											height: 5px;
 											// border: 2px solid var(--skin-color);
 											background: var(--background-min);
-											margin: 0 10px;
-											border-radius: 50%;
+											// border-radius: 50%;
 											cursor: pointer;
 											transition: 500ms;
 
