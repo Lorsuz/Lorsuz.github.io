@@ -31,7 +31,7 @@ fetch( "data.json" ).then( ( response ) => {
 				<li>
 					<div class="progress">
 						<div class="name-porcent">
-							<span>${ card.technology }</span>
+							<span>${ card.technology }</span>	
 							<div class="details">${ card.details }</div>
 							<span>${ card.percent }%</span>
 						</div>
