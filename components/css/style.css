@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap";
 @import "./animations/@keyframes.css";
@@ -303,14 +304,15 @@ body main section.home {
 }
 body main section.home .container {
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   justify-content: center;
   align-items: center;
   padding: 0;
   position: relative;
 }
 body main section.home .container .left {
-  width: 60%;
+  grid-column: 1/7;
 }
 body main section.home .container .left h1 {
   font-size: 30px;
@@ -418,7 +420,7 @@ body main section.home .container .right {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  grid-column: 7/13;
 }
 body main section.home .container .right .img {
   position: relative;
@@ -502,20 +504,21 @@ body main section.about .container h2 {
   color: var(--text-main);
   font-size: 25px;
 }
-body main section.about .container .geral-data {
-  display: flex;
-  justify-content: space-between;
+body main section.about .container .grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
 }
-body main section.about .container .geral-data .data-self {
-  width: 60%;
+body main section.about .container .grid-container .data-self {
+  grid-column: 1/9;
 }
-body main section.about .container .geral-data .data-self ul.data {
+body main section.about .container .grid-container .data-self ul.data {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
-body main section.about .container .geral-data .data-self ul.data li {
+body main section.about .container .grid-container .data-self ul.data li {
   width: 48%;
   height: 40px;
   display: flex;
@@ -523,16 +526,16 @@ body main section.about .container .geral-data .data-self ul.data li {
   border-bottom: 1px solid var(--background-min);
   color: var(--text-sub);
 }
-body main section.about .container .geral-data .data-self ul.data li span {
+body main section.about .container .grid-container .data-self ul.data li span {
   color: var(--text-main);
   font-weight: 900;
   padding-right: 5px;
 }
-body main section.about .container .geral-data .data-self .btn {
+body main section.about .container .grid-container .data-self .btn {
   width: 100%;
   margin-bottom: 70px;
 }
-body main section.about .container .geral-data .data-self .btn a {
+body main section.about .container .grid-container .data-self .btn a {
   margin-right: 30px;
   display: inline-block;
   padding: 10px 35px;
@@ -543,25 +546,25 @@ body main section.about .container .geral-data .data-self .btn a {
   transition: all 300ms ease;
   opacity: 0.8;
 }
-body main section.about .container .geral-data .data-self .btn a i {
+body main section.about .container .grid-container .data-self .btn a i {
   margin-right: 10px;
   font-size: 22px;
 }
-body main section.about .container .geral-data .data-self .btn a span {
+body main section.about .container .grid-container .data-self .btn a span {
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
 }
-body main section.about .container .geral-data .data-self .btn a:hover {
+body main section.about .container .grid-container .data-self .btn a:hover {
   opacity: 1;
 }
-body main section.about .container .geral-data .data-self .education h3 {
+body main section.about .container .grid-container .data-self .education h3 {
   margin-bottom: 20px;
   font-size: 30px;
   color: var(--text-main);
   text-align: center;
 }
-body main section.about .container .geral-data .data-self .education .contain {
+body main section.about .container .grid-container .data-self .education .contain {
   background: var(--background-max);
   border-radius: 10px;
   padding: 30px 25px;
@@ -571,7 +574,7 @@ body main section.about .container .geral-data .data-self .education .contain {
   box-shadow: 0 0 10px var(--background-min);
   position: relative;
 }
-body main section.about .container .geral-data .data-self .education .contain::before {
+body main section.about .container .grid-container .data-self .education .contain::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -583,7 +586,7 @@ body main section.about .container .geral-data .data-self .education .contain::b
   transition: 300ms;
   opacity: 1;
 }
-body main section.about .container .geral-data .data-self .education .contain ul li {
+body main section.about .container .grid-container .data-self .education .contain ul li {
   position: relative;
   padding-left: 23px;
   border-left: 5px solid var(--skin-color);
@@ -591,11 +594,11 @@ body main section.about .container .geral-data .data-self .education .contain ul
   padding-bottom: 30px;
   text-align: justify;
 }
-body main section.about .container .geral-data .data-self .education .contain ul li:last-child {
+body main section.about .container .grid-container .data-self .education .contain ul li:last-child {
   border-left: 5px solid transparent;
   padding-bottom: 0px;
 }
-body main section.about .container .geral-data .data-self .education .contain ul li .point {
+body main section.about .container .grid-container .data-self .education .contain ul li .point {
   width: 20px;
   height: 20px;
   background: var(--skin-color);
@@ -603,36 +606,36 @@ body main section.about .container .geral-data .data-self .education .contain ul
   position: absolute;
   transform: translateX(-178%);
 }
-body main section.about .container .geral-data .data-self .education .contain ul li .time {
+body main section.about .container .grid-container .data-self .education .contain ul li .time {
   margin-bottom: 10px;
   color: var(--text-sub);
 }
-body main section.about .container .geral-data .data-self .education .contain ul li .time i {
+body main section.about .container .grid-container .data-self .education .contain ul li .time i {
   margin-right: 8px;
   color: var(--text-main);
 }
-body main section.about .container .geral-data .data-self .education .contain ul li .time span {
+body main section.about .container .grid-container .data-self .education .contain ul li .time span {
   color: var(--text-sub);
 }
-body main section.about .container .geral-data .data-self .education .contain ul li h4 {
+body main section.about .container .grid-container .data-self .education .contain ul li h4 {
   color: var(--text-main);
   font-size: 20px;
   margin-bottom: 5px;
 }
-body main section.about .container .geral-data .data-self .education .contain ul li p {
+body main section.about .container .grid-container .data-self .education .contain ul li p {
   color: var(--text-sub);
 }
-body main section.about .container .geral-data .data-self .xp {
-  width: 600px;
+body main section.about .container .grid-container .data-self .xp {
+  max-width: 600px;
   margin: 0 auto;
 }
-body main section.about .container .geral-data .data-self .xp h3 {
+body main section.about .container .grid-container .data-self .xp h3 {
   text-align: center;
   font-size: 30px;
   color: var(--text-main);
   margin-bottom: 25px;
 }
-body main section.about .container .geral-data .data-self .xp .slides {
+body main section.about .container .grid-container .data-self .xp .slides {
   position: relative;
   padding: 20px 50px;
   overflow: hidden;
@@ -641,7 +644,7 @@ body main section.about .container .geral-data .data-self .xp .slides {
   background-size: 100%;
   box-shadow: 0 0 10px var(--background-min);
 }
-body main section.about .container .geral-data .data-self .xp .slides::before {
+body main section.about .container .grid-container .data-self .xp .slides::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -653,7 +656,7 @@ body main section.about .container .geral-data .data-self .xp .slides::before {
   opacity: 1;
   transition: 300ms;
 }
-body main section.about .container .geral-data .data-self .xp .slides:where(.next) {
+body main section.about .container .grid-container .data-self .xp .slides:where(.next) {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -666,93 +669,93 @@ body main section.about .container .geral-data .data-self .xp .slides:where(.nex
   user-select: none;
   background: #000;
 }
-body main section.about .container .geral-data .data-self .xp .slides .prev,
-body main section.about .container .geral-data .data-self .xp .slides .next {
+body main section.about .container .grid-container .data-self .xp .slides .prev,
+body main section.about .container .grid-container .data-self .xp .slides .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   padding: 10px 5px;
 }
-body main section.about .container .geral-data .data-self .xp .slides .prev:hover > i,
-body main section.about .container .geral-data .data-self .xp .slides .next:hover > i {
+body main section.about .container .grid-container .data-self .xp .slides .prev:hover > i,
+body main section.about .container .grid-container .data-self .xp .slides .next:hover > i {
   font-size: 40px;
 }
-body main section.about .container .geral-data .data-self .xp .slides .prev.blocked,
-body main section.about .container .geral-data .data-self .xp .slides .next.blocked {
+body main section.about .container .grid-container .data-self .xp .slides .prev.blocked,
+body main section.about .container .grid-container .data-self .xp .slides .next.blocked {
   opacity: 0.5;
   pointer-events: none;
 }
-body main section.about .container .geral-data .data-self .xp .slides .prev i,
-body main section.about .container .geral-data .data-self .xp .slides .next i {
+body main section.about .container .grid-container .data-self .xp .slides .prev i,
+body main section.about .container .grid-container .data-self .xp .slides .next i {
   color: var(--skin-color);
   font-size: 30px;
   transition: 200ms;
 }
-body main section.about .container .geral-data .data-self .xp .slides .prev {
+body main section.about .container .grid-container .data-self .xp .slides .prev {
   left: 10px;
 }
-body main section.about .container .geral-data .data-self .xp .slides .next {
+body main section.about .container .grid-container .data-self .xp .slides .next {
   right: 10px;
 }
-body main section.about .container .geral-data .data-self .xp .slides ul {
+body main section.about .container .grid-container .data-self .xp .slides ul {
   overflow: hidden;
   position: relative;
   height: 180px;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag {
   position: absolute;
   opacity: 0;
   transition: opacity 500ms 0ms;
   width: 500px;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag h4 {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag h4 {
   color: var(--skin-color);
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
   margin-bottom: 10px;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag .description {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description {
   display: flex;
   gap: 20px;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag .description .icon {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description .icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag .description .icon i {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description .icon i {
   color: var(--skin-color);
   font-size: 7rem;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag .description p {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description p {
   text-align: justify;
   color: var(--text-sub);
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag.toRightOld {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag.toRightOld {
   animation: toRightOld 500ms ease-in-out;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag.toRightNew {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag.toRightNew {
   animation: toRightNew 500ms ease-in-out;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag.toLeftOld {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag.toLeftOld {
   animation: toLeftOld 500ms ease-in-out;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag.toLeftNew {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag.toLeftNew {
   animation: toLeftNew 500ms ease-in-out;
 }
-body main section.about .container .geral-data .data-self .xp .slides .slides-pag.active {
+body main section.about .container .grid-container .data-self .xp .slides .slides-pag.active {
   opacity: 1;
   transition: opacity 0ms 0ms;
 }
-body main section.about .container .geral-data .data-self .xp .slides .dots-container {
+body main section.about .container .grid-container .data-self .xp .slides .dots-container {
   height: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body main section.about .container .geral-data .data-self .xp .slides .dots-container .dot {
+body main section.about .container .grid-container .data-self .xp .slides .dots-container .dot {
   width: 15px;
   height: 15px;
   background: var(--background-min);
@@ -761,56 +764,56 @@ body main section.about .container .geral-data .data-self .xp .slides .dots-cont
   cursor: pointer;
   transition: 500ms;
 }
-body main section.about .container .geral-data .data-self .xp .slides .dots-container .dot.active {
+body main section.about .container .grid-container .data-self .xp .slides .dots-container .dot.active {
   background: var(--skin-color);
 }
-body main section.about .container .geral-data .hardSkills {
-  width: 35%;
+body main section.about .container .grid-container .hardSkills {
+  grid-column: 9/13;
 }
-body main section.about .container .geral-data .hardSkills h3 {
+body main section.about .container .grid-container .hardSkills h3 {
   text-align: center;
   font-size: 30px;
   color: var(--text-main);
 }
-body main section.about .container .geral-data .hardSkills > span {
+body main section.about .container .grid-container .hardSkills > span {
   display: block;
   margin-bottom: 20px;
   color: var(--text-sub);
   text-align: center;
   font-weight: bold;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > h4 {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > h4 {
   margin-bottom: 10px;
   font-size: 20px;
   color: var(--skin-color);
   text-decoration: underline;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul {
   margin-bottom: 15px;
   border-bottom: 1px solid var(--background-min);
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li {
   position: relative;
   margin-bottom: 25px;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .name-porcent {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
   position: relative;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(1) {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(1) {
   font-weight: 900;
   color: var(--text-main);
   cursor: pointer;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(1):hover ~ .details {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(1):hover ~ .details {
   visibility: visible;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(3) {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(3) {
   color: var(--text-sub);
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .name-porcent .details {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent .details {
   position: absolute;
   visibility: hidden;
   top: 220%;
@@ -821,8 +824,9 @@ body main section.about .container .geral-data .hardSkills #hardSkills-container
   padding: 10px;
   border-radius: 10px;
   text-align: justify;
+  transition: none;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .name-porcent .details::before {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent .details::before {
   position: absolute;
   content: "";
   width: 0px;
@@ -833,21 +837,21 @@ body main section.about .container .geral-data .hardSkills #hardSkills-container
   top: 0;
   transform: translateY(-100%);
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar {
   width: 100%;
   height: 10px;
   background: var(--background-min);
   overflow: hidden;
   border-radius: 50px;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value {
   background: var(--skin-color);
   height: 100%;
   position: relative;
   display: flex;
   align-items: center;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::after, body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::before {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::after, body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::before {
   content: "";
   background: var(--skin-color);
   position: absolute;
@@ -855,14 +859,14 @@ body main section.about .container .geral-data .hardSkills #hardSkills-container
   transform-origin: center;
   transition: 300ms;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::after {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::after {
   animation: flip 1.5s infinite linear;
   width: 35px;
   height: 35px;
   border-radius: 35%;
   opacity: 0.5;
 }
-body main section.about .container .geral-data .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::before {
+body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::before {
   animation: flip 2s infinite reverse linear;
   width: 30px;
   height: 30px;
@@ -877,16 +881,15 @@ body main section.about .container .geral-data .hardSkills #hardSkills-container
   }
 }
 body main section.services #services-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 body main section.services #services-container .card {
   min-width: 300px;
-  width: 30%;
-  max-width: 450px;
+  max-width: 400px;
   background: var(--background-max);
   padding: 20px;
-  margin: 10px;
   border: 2px solid var(--background-min);
   border-radius: 5px;
 }
@@ -936,28 +939,149 @@ body main section.services #services-container .card:hover i {
   padding: 20px;
   border-radius: 50%;
 }
-body main section.highlights .something {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+body main section.highlights .better {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-body main section.highlights .something div {
-  margin: 10px;
-  width: 300px;
+body main section.highlights .better li {
+  max-width: 500px;
   height: 150px;
   background: var(--background-max);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--skin-color);
   position: relative;
   top: 0;
   left: 0;
 }
-body main section.highlights .something div:hover {
+body main section.highlights .better li:hover {
   box-shadow: 5px 5px 0 0 var(--skin-color), 10px 10px 0 0 var(--background-min);
   top: -10px;
   left: -10px;
 }
-body main section.projects #projects-container {
+body main section.highlights .better li::before, body main section.highlights .better li::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: var(--background-middle);
+}
+body main section.highlights .better li::before {
+  top: 30%;
+}
+body main section.highlights .better li::after {
+  bottom: 30%;
+}
+body main section.highlights .soft-skills {
+  margin-bottom: 50px;
+}
+body main section.highlights .soft-skills h2 {
+  color: var(--skin-color);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+body main section.highlights .soft-skills ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+body main section.highlights .soft-skills ul li {
+  padding: 10px 20px;
+  border-radius: 10px 0;
+  background: var(--background-max);
+  color: var(--text-sub);
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body main section.highlights .soft-skills ul li:hover {
+  background: var(--skin-color);
+  color: var(--background-max);
+}
+body main section.highlights article.box {
+  background: var(--background-max);
+  border-radius: 30px;
+  padding: 50px;
+  margin-bottom: 100px;
+}
+body main section.highlights article.box > div {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 100px;
+}
+body main section.highlights article.box > div .img {
+  grid-column: 1/6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section.highlights article.box > div .img img {
+  width: 100%;
+}
+body main section.highlights article.box > div .content {
+  grid-column: 7/13;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body main section.highlights article.box > div .content h2 {
+  color: var(--skin-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  padding-left: 10px;
+}
+body main section.highlights article.box > div .content h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background: var(--background-min);
+  left: 0;
+}
+body main section.highlights article.box > div .content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body main section.highlights article.box > div .content ul li {
+  color: var(--text-sub);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body main section.highlights article.box > div .content ul li::before {
+  content: "★";
+  color: var(--skin-color);
+  font-size: 1.2rem;
+}
+body main section.highlights article.box > div.strength .img {
+  grid-column: 7/13;
+}
+body main section.highlights article.box > div.strength .content {
+  grid-column: 1/6;
+}
+body main section.highlights article.box > div.awards {
+  margin: 0;
+}
+body main section.projects #projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
 body main section.projects #projects-container .card {
   margin: 20px;

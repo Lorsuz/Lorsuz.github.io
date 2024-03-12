@@ -6,7 +6,7 @@ fetch( "data.json" ).then( ( response ) => {
 		
 		var amountItems = data.skills.length;
 		var itemCurrent = 0;
-		var sections = [ "Linguagens", "Pré-processadores", "Frameworks", "Acessórios", "Engines" ];
+		var sections = [ "Languages", "Preprocessors", "Frameworks", "Add-Ons", "Engines" ];
 		var newUlStart = [ 0, 8, 10, 12, 16 ];
 		var nameSection = 0;
 		data.skills.map( ( card ) => {

@@ -365,14 +365,15 @@ body {
 
 				.container {
 					height: 100%;
-					display: flex;
+					display: grid;
+					grid-template-columns: repeat(12, 1fr);
 					justify-content: center;
 					align-items: center;
 					padding: 0;
 					position: relative;
 
 					.left {
-						width: 60%;
+						grid-column: 1/7;
 
 						h1 {
 							font-size: 30px;
@@ -505,7 +506,7 @@ body {
 						flex-direction: column;
 						justify-content: center;
 						align-items: center;
-						width: 40%;
+						grid-column: 7/13;
 
 						.img {
 							position: relative;
@@ -617,13 +618,12 @@ body {
 						font-size: 25px;
 					}
 
-					.geral-data {
-						display: flex;
-						justify-content: space-between;
-
+					.grid-container{
+						display: grid;
+						grid-template-columns: repeat(12, 1fr);
+						gap: 30px;
 						.data-self {
-							width: 60%;
-
+							grid-column: 1/9;
 							ul.data {
 								display: flex;
 								justify-content: space-between;
@@ -762,7 +762,7 @@ body {
 							}
 
 							.xp {
-								width: 600px;
+								max-width: 600px;
 								margin: 0 auto;
 
 								h3 {
@@ -821,6 +821,7 @@ body {
 												font-size: 40px;
 											}
 										}
+
 										&.blocked {
 											opacity: 0.5;
 											pointer-events: none;
@@ -930,7 +931,8 @@ body {
 						}
 
 						.hardSkills {
-							width: 35%;
+							grid-column: 9/13;
+
 
 							h3 {
 								text-align: center;
@@ -1000,6 +1002,7 @@ body {
 													padding: 10px;
 													border-radius: 10px;
 													text-align: justify;
+													transition: none;
 
 													&::before {
 														position: absolute;
@@ -1075,8 +1078,8 @@ body {
 									}
 								}
 							}
-						}
-					}
+						}}
+					
 				}
 			}
 
@@ -1086,17 +1089,16 @@ body {
 				}
 
 				#services-container {
-					display: flex;
-					flex-wrap: wrap;
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+					gap: 20px;
 					// justify-content: space-between;
 
 					.card {
 						min-width: 300px;
-						width: 30%;
-						max-width: 450px;
+						max-width: 400px;
 						background: var(--background-max);
 						padding: 20px;
-						margin: 10px;
 						border: 2px solid var(--background-min);
 						border-radius: 5px;
 
@@ -1157,17 +1159,25 @@ body {
 			}
 
 			&.highlights {
-				.something {
-					display: flex;
-					justify-content: space-around;
-					flex-wrap: wrap;
+				.better {
+					margin-bottom: 50px;
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+					align-items: center;
+					justify-content: center;
+					gap: 20px;
 
-					div {
-						margin: 10px;
-						width: 300px;
+					li {
+						max-width: 500px;
 						height: 150px;
 						background: var(--background-max);
-
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 2rem;
+						text-transform: uppercase;
+						font-weight: bold;
+						color: var(--skin-color);
 						position: relative;
 						top: 0;
 						left: 0;
@@ -1177,22 +1187,167 @@ body {
 							top: -10px;
 							left: -10px;
 						}
+						&::before, &::after{
+							content: "";
+							position: absolute;
+							width: 60%;
+							height: 3px;
+							background: var(--background-middle);
+							// left: 0;
+							
+						}
+						&::before{
+							top: 30%;
+						}
+						&::after{
+							bottom: 30%;
+						}
 					}
 				}
+
+				.soft-skills {
+					margin-bottom: 50px;
+
+					h2 {
+						color: var(--skin-color);
+
+						font-size: 2rem;
+						margin-bottom: 30px;
+						text-align: center;
+					}
+
+					ul {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						gap: 20px;
+
+						li {
+							padding: 10px 20px;
+							border-radius: 10px 0;
+							background: var(--background-max);
+							color: var(--text-sub);
+							font-weight: bold;
+							font-size: 1.1rem;
+							display: flex;
+							align-items: center;
+							gap: 10px;
+
+							&:hover {
+								background: var(--skin-color);
+								color: var(--background-max);
+							}
+
+						}
+					}
+				}
+
+				article.box {
+					background: var(--background-max);
+					border-radius: 30px;
+					padding: 50px;
+					margin-bottom: 100px;
+
+					* {
+						// outline: 1px dotted;
+					}
+
+					> div {
+						display: grid;
+						grid-template-columns: repeat(12, 1fr);
+						margin-bottom: 100px;
+
+						// background: var(--background-max);
+						.img {
+							grid-column: 1/6;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+
+							img {
+								width: 100%;
+							}
+
+						}
+
+						.content {
+							grid-column: 7/13;
+							display: flex;
+							justify-content: center;
+							// align-items: center;
+							flex-direction: column;
+
+							h2 {
+								color: var(--skin-color);
+
+								font-size: 2rem;
+								margin-bottom: 20px;
+								position: relative;
+								width: 100%;
+								padding-left: 10px;
+
+								&::after {
+									content: "";
+									position: absolute;
+									width: 100%;
+									height: 2px;
+									bottom: 0;
+									background: var(--background-min);
+									left: 0;
+								}
+							}
+
+							ul {
+								display: flex;
+								flex-direction: column;
+								gap: 5px;
+
+								li {
+									color: var(--text-sub);
+									font-size: 0.9rem;
+									display: flex;
+									align-items: center;
+									gap: 10px;
+
+									&::before {
+										content: "\2605";
+										color: var(--skin-color);
+										font-size: 1.2rem;
+
+									}
+								}
+							}
+						}
+
+						&.strength {
+							.img {
+								grid-column: 7/13;
+							}
+
+							.content {
+								grid-column: 1/6;
+							}
+						}
+
+						&.awards {
+							margin: 0;
+						}
+					}
+				}
+
+
 			}
 
 			&.projects {
 				#projects-container {
-					display: flex;
-					flex-wrap: wrap;
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 
 					.card {
 						margin: 20px;
 						overflow: hidden;
 						position: relative;
 						width: 450px;
-						// min-width: 450px;
-						// max-width: 600px;
 						border-radius: 10px;
 						height: 270px;
 						background: var(--background-max);

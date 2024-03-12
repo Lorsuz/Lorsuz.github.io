@@ -78,7 +78,7 @@
 			"details": "Hypertext Preprocessor"
 		},
 		{
-			"technology": "SQL",
+			"technology": "SQL & NoSQL",
 			"percent": 85,
 			"details": "Structured Query Language"
 		},
@@ -118,9 +118,9 @@
 			"details": "Laravel PHP Framework"
 		},
 		{
-			"technology": "PL",
+			"technology": "Programming Logic",
 			"percent": 100,
-			"details": "Programming Logic"
+			"details": "Algorithms"
 		},
 		{
 			"technology": "OOP",
@@ -234,7 +234,7 @@
 				"CSS",
 				"Java Script"
 			],
-			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+			"description": "One of my first projects, made using more basic skills trying to imitate something I saw in a post and also asking a certain person to date.",
 			"repository": "flirt-me",
 			"pages": "https://lorsuz.github.io/flirt-me/"
 		},

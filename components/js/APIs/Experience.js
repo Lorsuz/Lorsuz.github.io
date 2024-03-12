@@ -1,7 +1,7 @@
 import Slide from "../classes/Slide.js";
 
 let Experience = document.querySelector( "#experience-container" );
-let dotsContainer = document.querySelector( "main section.about .container .geral-data .data-self .xp .slides .dots-container" );
+let dotsContainer = document.querySelector( ".data-self .xp .slides .dots-container" );
 
 async function fetchData () {
 	try {
@@ -25,10 +25,10 @@ async function fetchData () {
 		} );
 
 		new Slide(
-			"main section.about .container .geral-data .data-self .xp .slides #experience-container li",
-			"main section.about .container .geral-data .data-self .xp .slides .prev",
-			"main section.about .container .geral-data .data-self .xp .slides .next",
-			"main section.about .container .geral-data .data-self .xp .slides .dots-container .dot"
+			".data-self .xp .slides #experience-container li",
+			".data-self .xp .slides .prev",
+			".data-self .xp .slides .next",
+			".data-self .xp .slides .dots-container .dot"
 		);
 	} catch ( error ) {
 		console.error( "Error fetching data:", error );
