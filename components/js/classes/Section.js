@@ -16,6 +16,12 @@ class Section {
 
 	appearSection ( index ) {
 		if ( this.indexCurrent != index ) {
+			for ( let index = 0; index < this.button.length; index++ ) {
+				this.button[ index ].disabled = true;
+				setTimeout( () => {
+					this.button[ index ].disabled = false;
+				}, 1000 );
+			}
 			this.zIndex++;
 			this.section[ this.indexCurrent ].classList.remove( "sectionAppear" );
 

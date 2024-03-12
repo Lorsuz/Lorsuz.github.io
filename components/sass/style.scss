@@ -47,6 +47,10 @@ body {
 	line-height: 1.5;
 	font-size: 16px;
 	overflow-x: hidden;
+	min-width: 1280px;
+	max-width: 2000px;
+	margin: 0 auto;
+	// position: relative;
 
 	.dot-in {
 		width: 6px;

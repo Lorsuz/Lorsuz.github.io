@@ -291,7 +291,10 @@
 			"image": "walltitles.png",
 			"skills": [
 				"HTML",
-				"CSS"
+				"CSS",
+				"JS",
+				"PHP",
+				"MYSQL"
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
 			"repository": "walltitles",
@@ -334,8 +337,8 @@
 			"project": "Weather App",
 			"image": "weather-app.png",
 			"skills": [
-				"HTML",
-				"CSS"
+				"REACT",
+				"SASS"
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
 			"repository": "weather-app",
@@ -367,8 +370,8 @@
 			"project": "Mr. Pet",
 			"image": "mr-pet.png",
 			"skills": [
-				"HTML",
-				"CSS"
+				"REACT",
+				"SASS"
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
 			"repository": "",
@@ -389,8 +392,12 @@
 			"project": "Infosion",
 			"image": "infosion.png",
 			"skills": [
-				"HTML",
-				"CSS"
+				"EJS",
+				"CSS",
+				"JS",
+				"Node.js",
+				"Express",
+				"SQLite"
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
 			"repository": "",
@@ -401,7 +408,10 @@
 			"image": "buycity.png",
 			"skills": [
 				"HTML",
-				"CSS"
+				"CSS",
+				"Java Script",
+				"PHP",
+				"MYSQL"
 			],
 			"description": "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
 			"repository": "",

@@ -7,6 +7,7 @@ import "./APIs/Projects.js";
 import "./events/CustomMouseOver.js";
 import "./events/CustomMouseMove.js";
 import "./events/HoverOccurredOnStar.js";
+import "./events/ContactForm.js";
 
 import "./classes/Color.js"
 import "./classes/Mode.js"
