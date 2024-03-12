@@ -48,9 +48,7 @@ body {
 	min-height: 100dvh;
 	font-size: 16px;
 	overflow-x: hidden;
-	min-width: 1280px;
-	max-width: 2000px;
-	margin: 0 auto;
+	background: var(--background-middle);
 
 	.dot-cursor {
 		.dot-in {
@@ -299,9 +297,13 @@ body {
 	}
 
 	main {
+		margin: 0 auto;
+		
 		section {
+			min-width: 1050px;
+			max-width: 1850px;
 			background: var(--background-middle);
-			height: 100vh;
+			height: 100dvh;
 			position: absolute;
 			left: 270px;
 			padding: 0 30px;

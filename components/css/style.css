@@ -41,9 +41,7 @@ body {
   min-height: 100dvh;
   font-size: 16px;
   overflow-x: hidden;
-  min-width: 1280px;
-  max-width: 2000px;
-  margin: 0 auto;
+  background: var(--background-middle);
 }
 body .dot-cursor .dot-in {
   width: 6px;
@@ -245,9 +243,14 @@ body aside .theme:where(label) {
   font-size: 25px;
   transition: transform 500ms ease-in-out;
 }
+body main {
+  margin: 0 auto;
+}
 body main section {
+  min-width: 1050px;
+  max-width: 1850px;
   background: var(--background-middle);
-  height: 100vh;
+  height: 100dvh;
   position: absolute;
   left: 270px;
   padding: 0 30px;
