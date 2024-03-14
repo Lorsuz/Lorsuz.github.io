@@ -35,6 +35,9 @@ button i {
   font-family: "poppins", sans-serif;
   transition: 300ms;
 }
+*:focus {
+  outline: 2px solid var(--skin-color);
+}
 
 body {
   line-height: 1.5;
@@ -43,39 +46,27 @@ body {
   overflow-x: hidden;
   background: var(--background-middle);
 }
-body .dot-cursor .dot-in {
-  width: 6px;
-  aspect-ratio: 1;
+body .dot-cursor > div {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  pointer-events: none;
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
-  background-color: var(--text-sub);
-  pointer-events: none;
-  border-radius: 50%;
+  transition: all 500ms, transform 100ms ease;
+  width: 30px;
   z-index: 1000;
+}
+body .dot-cursor .dot-in {
+  background-color: var(--text-sub);
   transition: all 500ms, transform 50ms ease;
+  width: 6px;
 }
 body .dot-cursor .dot-out {
-  width: 30px;
-  aspect-ratio: 1;
-  position: absolute;
-  transform: translateX(-50%) translateY(-50%);
   border: 2px solid var(--text-sub);
-  pointer-events: none;
-  border-radius: 50%;
-  z-index: 1000;
-  transition: all 500ms, transform 100ms ease;
 }
 body .dot-cursor .dot-pointer {
-  width: 30px;
-  aspect-ratio: 1;
-  position: absolute;
-  transform: translateX(-50%) translateY(-50%);
   background: var(--text-sub);
-  pointer-events: none;
-  border-radius: 50%;
-  z-index: 1000;
   opacity: 0;
-  transition: all 500ms, transform 100ms ease;
 }
 body aside {
   padding: 30px;

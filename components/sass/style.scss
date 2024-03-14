@@ -1,6 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap";
-
 @import "./animations/@keyframes.css";
 
 :root {
@@ -41,6 +40,9 @@ button {
 	font-family: "poppins", sans-serif;
 	transition: 300ms;
 	// outline: 1px dotted var(--text-main);
+	&:focus {
+    outline: 2px solid var(--skin-color);
+}
 }
 
 body {
@@ -51,41 +53,30 @@ body {
 	background: var(--background-middle);
 
 	.dot-cursor {
-		.dot-in {
-			width: 6px;
-			aspect-ratio: 1;
+		> div {
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			pointer-events: none;
 			position: absolute;
 			transform: translateX(-50%) translateY(-50%);
-			background-color: var(--text-sub);
-			pointer-events: none;
-			border-radius: 50%;
+			transition: all 500ms, transform 100ms ease;
+			width: 30px;
 			z-index: 1000;
+		}
+
+		.dot-in {
+			background-color: var(--text-sub);
 			transition: all 500ms, transform 50ms ease;
+			width: 6px;
 		}
 
 		.dot-out {
-			width: 30px;
-			aspect-ratio: 1;
-			position: absolute;
-			transform: translateX(-50%) translateY(-50%);
 			border: 2px solid var(--text-sub);
-			pointer-events: none;
-			border-radius: 50%;
-			z-index: 1000;
-			transition: all 500ms, transform 100ms ease;
 		}
 
 		.dot-pointer {
-			width: 30px;
-			aspect-ratio: 1;
-			position: absolute;
-			transform: translateX(-50%) translateY(-50%);
 			background: var(--text-sub);
-			pointer-events: none;
-			border-radius: 50%;
-			z-index: 1000;
 			opacity: 0;
-			transition: all 500ms, transform 100ms ease;
 		}
 	}
 
@@ -298,7 +289,7 @@ body {
 
 	main {
 		margin: 0 auto;
-		
+
 		section {
 			min-width: 1050px;
 			max-width: 1850px;
