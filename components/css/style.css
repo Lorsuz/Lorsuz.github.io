@@ -35,10 +35,6 @@ button i {
   list-style: none;
   font-family: "poppins", sans-serif;
   transition: 300ms;
-  outline: 1px dotted;
-}
-*:focus {
-  outline: 2px solid var(--background-min);
 }
 
 body {
