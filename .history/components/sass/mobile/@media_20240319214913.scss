@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+	body {
+		.dot-cursor {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1600px) {
+	body {
+		main {
+			section.home {
+				.container {
+					.right {
+						display: none;
+
+						
+					}
+				}
+			}
+		}
+	}
+}
