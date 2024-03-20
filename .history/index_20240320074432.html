@@ -46,13 +46,12 @@
 				<div class="container">
 					<div class="left">
 						<h1>Hi, my name is <span>Ariel Souza</span> </h1>
-						<h2>I am &#60;<span class="typing" id="typing">Developer</span>&#47;&#62;
+						<h2>I am &#60;<span class="typing" id="typing"></span>&#47;&#62;
 							<!-- <span class="and">&</span> &#36;<span class="typing">Programmer</span> -->
 						</h2>
 						<script>
 							const typeMachineElement = document.getElementById( 'typing' );
-							typeMachineElement.textContent = '';
-							const words = [ 'Fullstack', 'Freelancer', 'Computer Technician', 'Programmer', 'Web Developer' ];
+							const words = [ 'Hello', 'World', 'OpenAI', 'Machine Learning', 'Developer' ];
 							let index = 0;
 							let currentWord = '';
 
@@ -72,7 +71,7 @@
 									if ( currentLetter === currentWord.length ) {
 										clearInterval( writeLetter );
 
-										setTimeout( clearWord, 2000 );
+										setTimeout( clearWord, 1000 );
 									}
 								}, 100 );
 							}

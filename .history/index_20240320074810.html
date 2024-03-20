@@ -52,7 +52,7 @@
 						<script>
 							const typeMachineElement = document.getElementById( 'typing' );
 							typeMachineElement.textContent = '';
-							const words = [ 'Fullstack', 'Freelancer', 'Computer Technician', 'Programmer', 'Web Developer' ];
+							const words = [ 'Hello', 'Freelancer', 'Lorsuz', 'Programmer', 'Web Developer' ];
 							let index = 0;
 							let currentWord = '';
 
@@ -72,7 +72,7 @@
 									if ( currentLetter === currentWord.length ) {
 										clearInterval( writeLetter );
 
-										setTimeout( clearWord, 2000 );
+										setTimeout( clearWord, 1000 );
 									}
 								}, 100 );
 							}

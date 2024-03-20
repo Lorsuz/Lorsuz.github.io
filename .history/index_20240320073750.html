@@ -46,54 +46,53 @@
 				<div class="container">
 					<div class="left">
 						<h1>Hi, my name is <span>Ariel Souza</span> </h1>
-						<h2>I am &#60;<span class="typing" id="typing">Developer</span>&#47;&#62;
+						<h2>I am &#60;<span class="typing" id="typing"></span>&#47;&#62;
 							<!-- <span class="and">&</span> &#36;<span class="typing">Programmer</span> -->
 						</h2>
 						<script>
-							const typeMachineElement = document.getElementById( 'typing' );
-							typeMachineElement.textContent = '';
-							const words = [ 'Fullstack', 'Freelancer', 'Computer Technician', 'Programmer', 'Web Developer' ];
+							const textoElement = document.getElementById( 'typing' );
+							const palavras = [ 'Hello', 'World', 'OpenAI', 'Machine Learning', 'Developer' ];
 							let index = 0;
-							let currentWord = '';
+							let palavraAtual = '';
 
-							function writeWord () {
-								if ( index === words.length ) {
+							function escreverPalavra () {
+								if ( index === palavras.length ) {
 									index = 0;
 								}
 
-								currentWord = words[ index ];
-								let currentLetter = 0;
+								palavraAtual = palavras[ index ];
+								let caractereAtual = 0;
 
-								const writeLetter = setInterval( () => {
-									typeMachineElement.textContent += currentWord.charAt( currentLetter );
+								const escreverCaractere = setInterval( () => {
+									textoElement.textContent += palavraAtual.charAt( caractereAtual );
 
-									currentLetter++;
+									caractereAtual++;
 
-									if ( currentLetter === currentWord.length ) {
-										clearInterval( writeLetter );
+									if ( caractereAtual === palavraAtual.length ) {
+										clearInterval( escreverCaractere );
 
-										setTimeout( clearWord, 2000 );
+										setTimeout( apagarPalavra, 1000 );
 									}
 								}, 100 );
 							}
 
-							function clearWord () {
-								let removedLetters = 0;
+							function apagarPalavra () {
+								let caracteresApagados = 0;
 
-								const clearLetter = setInterval( () => {
-									typeMachineElement.textContent = typeMachineElement.textContent.slice( 0, -1 );
+								const apagarCaractere = setInterval( () => {
+									textoElement.textContent = textoElement.textContent.slice( 0, -1 );
 
-									removedLetters++;
+									caracteresApagados++;
 
-									if ( removedLetters === currentWord.length ) {
-										clearInterval( clearLetter );
-										index++;
-										setTimeout( writeWord, 1000 );
+									if ( caracteresApagados === palavraAtual.length ) {
+										clearInterval( apagarCaractere );
+
+										setTimeout( escreverPalavra, 1000 );
 									}
 								}, 100 );
 							}
 
-							writeWord();
+							escreverPalavra();
 						</script>
 						<p>I have talents in coding and a lot of desire to learn. I have dedicated myself to improving my
 							programming skills through self-study and practice projects.</p>

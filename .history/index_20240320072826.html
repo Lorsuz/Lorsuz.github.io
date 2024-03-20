@@ -46,55 +46,7 @@
 				<div class="container">
 					<div class="left">
 						<h1>Hi, my name is <span>Ariel Souza</span> </h1>
-						<h2>I am &#60;<span class="typing" id="typing">Developer</span>&#47;&#62;
-							<!-- <span class="and">&</span> &#36;<span class="typing">Programmer</span> -->
-						</h2>
-						<script>
-							const typeMachineElement = document.getElementById( 'typing' );
-							typeMachineElement.textContent = '';
-							const words = [ 'Fullstack', 'Freelancer', 'Computer Technician', 'Programmer', 'Web Developer' ];
-							let index = 0;
-							let currentWord = '';
-
-							function writeWord () {
-								if ( index === words.length ) {
-									index = 0;
-								}
-
-								currentWord = words[ index ];
-								let currentLetter = 0;
-
-								const writeLetter = setInterval( () => {
-									typeMachineElement.textContent += currentWord.charAt( currentLetter );
-
-									currentLetter++;
-
-									if ( currentLetter === currentWord.length ) {
-										clearInterval( writeLetter );
-
-										setTimeout( clearWord, 2000 );
-									}
-								}, 100 );
-							}
-
-							function clearWord () {
-								let removedLetters = 0;
-
-								const clearLetter = setInterval( () => {
-									typeMachineElement.textContent = typeMachineElement.textContent.slice( 0, -1 );
-
-									removedLetters++;
-
-									if ( removedLetters === currentWord.length ) {
-										clearInterval( clearLetter );
-										index++;
-										setTimeout( writeWord, 1000 );
-									}
-								}, 100 );
-							}
-
-							writeWord();
-						</script>
+						<h2>I am <span class="typing">&#60;Web Developer&#40;&#62;</span> <span class="and">&</span> <span class="typing">Programmer</span></h2>
 						<p>I have talents in coding and a lot of desire to learn. I have dedicated myself to improving my
 							programming skills through self-study and practice projects.</p>
 						<div class="actions">

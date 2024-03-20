@@ -46,13 +46,12 @@
 				<div class="container">
 					<div class="left">
 						<h1>Hi, my name is <span>Ariel Souza</span> </h1>
-						<h2>I am &#60;<span class="typing" id="typing">Developer</span>&#47;&#62;
+						<h2>I am &#60;<span class="typing" id="typing"></span>&#47;&#62;
 							<!-- <span class="and">&</span> &#36;<span class="typing">Programmer</span> -->
 						</h2>
 						<script>
 							const typeMachineElement = document.getElementById( 'typing' );
-							typeMachineElement.textContent = '';
-							const words = [ 'Fullstack', 'Freelancer', 'Computer Technician', 'Programmer', 'Web Developer' ];
+							const words = [ 'Hello', 'World', 'OpenAI', 'Machine Learning', 'Developer' ];
 							let index = 0;
 							let currentWord = '';
 
@@ -72,22 +71,22 @@
 									if ( currentLetter === currentWord.length ) {
 										clearInterval( writeLetter );
 
-										setTimeout( clearWord, 2000 );
+										setTimeout( apagarPalavra, 1000 );
 									}
 								}, 100 );
 							}
 
-							function clearWord () {
-								let removedLetters = 0;
+							function apagarPalavra () {
+								let caracteresApagados = 0;
 
-								const clearLetter = setInterval( () => {
+								const apagarCaractere = setInterval( () => {
 									typeMachineElement.textContent = typeMachineElement.textContent.slice( 0, -1 );
 
-									removedLetters++;
+									caracteresApagados++;
 
-									if ( removedLetters === currentWord.length ) {
-										clearInterval( clearLetter );
-										index++;
+									if ( caracteresApagados === currentWord.length ) {
+										clearInterval( apagarCaractere );
+
 										setTimeout( writeWord, 1000 );
 									}
 								}, 100 );

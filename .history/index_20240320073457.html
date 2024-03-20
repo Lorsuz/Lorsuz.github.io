@@ -46,54 +46,65 @@
 				<div class="container">
 					<div class="left">
 						<h1>Hi, my name is <span>Ariel Souza</span> </h1>
-						<h2>I am &#60;<span class="typing" id="typing">Developer</span>&#47;&#62;
+						<h2>I am &#60;<span class="typing">Developer</span>&#47;&#62;
 							<!-- <span class="and">&</span> &#36;<span class="typing">Programmer</span> -->
 						</h2>
 						<script>
-							const typeMachineElement = document.getElementById( 'typing' );
-							typeMachineElement.textContent = '';
-							const words = [ 'Fullstack', 'Freelancer', 'Computer Technician', 'Programmer', 'Web Developer' ];
-							let index = 0;
-							let currentWord = '';
+							const textoElement = document.getElementsByClassName( 'typing' );
+							const palavras = [ 'Hello', 'World', 'OpenAI', 'Machine Learning' ];
+							let indice = 0;
+							let palavraAtual = '';
 
-							function writeWord () {
-								if ( index === words.length ) {
-									index = 0;
+							function escreverPalavra () {
+								// Verifica se todas as palavras foram exibidas, se sim, reinicia o índice
+								if ( indice === palavras.length ) {
+									indice = 0;
 								}
 
-								currentWord = words[ index ];
-								let currentLetter = 0;
+								palavraAtual = palavras[ indice ];
+								let caractereAtual = 0;
 
-								const writeLetter = setInterval( () => {
-									typeMachineElement.textContent += currentWord.charAt( currentLetter );
+								// Função para adicionar cada caractere da palavra de forma animada
+								const escreverCaractere = setInterval( () => {
+									// Adiciona o próximo caractere da palavra ao elemento de texto
+									textoElement.textContent += palavraAtual.charAt( caractereAtual );
 
-									currentLetter++;
+									// Incrementa o índice do caractere
+									caractereAtual++;
 
-									if ( currentLetter === currentWord.length ) {
-										clearInterval( writeLetter );
+									// Verifica se todos os caracteres da palavra foram adicionados
+									if ( caractereAtual === palavraAtual.length ) {
+										clearInterval( escreverCaractere );
 
-										setTimeout( clearWord, 2000 );
+										// Aguarda 1 segundo antes de apagar a palavra
+										setTimeout( apagarPalavra, 1000 );
 									}
-								}, 100 );
+								}, 100 ); // Intervalo de 100 milissegundos entre cada caractere
 							}
 
-							function clearWord () {
-								let removedLetters = 0;
+							function apagarPalavra () {
+								let caracteresApagados = 0;
 
-								const clearLetter = setInterval( () => {
-									typeMachineElement.textContent = typeMachineElement.textContent.slice( 0, -1 );
+								// Função para apagar cada caractere da palavra de forma animada
+								const apagarCaractere = setInterval( () => {
+									// Remove o último caractere do elemento de texto
+									textoElement.textContent = textoElement.textContent.slice( 0, -1 );
 
-									removedLetters++;
+									// Incrementa o contador de caracteres apagados
+									caracteresApagados++;
 
-									if ( removedLetters === currentWord.length ) {
-										clearInterval( clearLetter );
-										index++;
-										setTimeout( writeWord, 1000 );
+									// Verifica se todos os caracteres foram apagados
+									if ( caracteresApagados === palavraAtual.length ) {
+										clearInterval( apagarCaractere );
+
+										// Aguarda 1 segundo antes de escrever a próxima palavra
+										setTimeout( escreverPalavra, 1000 );
 									}
-								}, 100 );
+								}, 100 ); // Intervalo de 100 milissegundos entre cada caractere
 							}
 
-							writeWord();
+							// Inicia a simulação da máquina de escrever
+							escreverPalavra();
 						</script>
 						<p>I have talents in coding and a lot of desire to learn. I have dedicated myself to improving my
 							programming skills through self-study and practice projects.</p>
