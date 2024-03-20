@@ -9,7 +9,6 @@ import "./events/CustomMouseMove.js";
 import "./events/HoverOccurredOnStar.js";
 import "./events/ContactForm.js";
 import "./events/NavBarMobile.js";
-import "./events/TypeMachine.js";
 
 import "./classes/Color.js";
 import "./classes/Mode.js";

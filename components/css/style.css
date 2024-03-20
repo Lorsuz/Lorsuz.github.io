@@ -549,7 +549,6 @@ body main section.home .container .left blockquote {
   border-left: 3px solid var(--skin-color);
   padding-left: 20px;
   width: 90%;
-  margin-bottom: 50px;
 }
 @media (max-width: 910px) {
   body main section.home .container .left blockquote {
