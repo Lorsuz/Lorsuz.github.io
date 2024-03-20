@@ -59,7 +59,7 @@ body {
 	overflow: hidden;
 	background: var(--background-middle);
 
-	@media (max-width: $hideAside) {
+	@media screen and (max-width: $hideAside) {
 		overflow: visible;
 
 
@@ -77,7 +77,7 @@ body {
 	}
 
 	.dot-cursor {
-		@media (max-width: $hideAside) {
+		@media screen and (max-width: $hideAside) {
 			display: none;
 		}
 
@@ -160,7 +160,7 @@ body {
 		align-items: center;
 		flex-direction: column;
 
-		@media (max-width: $hideAside) {
+		@media screen and (max-width: $hideAside) {
 			display: none;
 		}
 
@@ -373,10 +373,9 @@ body {
 			transition: 300ms;
 			display: none;
 			z-index: 10;
-			margin: 20px 0 50px;
 
 
-			@media (max-width: $hideAside) {
+			@media screen and (max-width: $hideAside) {
 				display: block;
 			}
 
@@ -408,11 +407,10 @@ body {
 			z-index: 0;
 			opacity: 1;
 			overflow-x: hidden;
-			// min-height: 100vh;
 			overflow-y: scroll;
 			border-left: 1px solid var(--background-min);
 
-			@media (max-width: $hideAside) {
+			@media screen and (max-width: $hideAside) {
 				border-left: none;
 				left: 0px;
 				position: static;
@@ -440,8 +438,10 @@ body {
 
 			> .container {
 				padding: 20px 15px 50px 0;
-				// min-height: 700px;
-				height: 100%;
+				min-height: 700px;
+				min-height: 100vh;
+				height: auto;
+
 
 
 				> h1 {
@@ -485,10 +485,6 @@ body {
 				color: var(--text-main);
 				z-index: 1;
 
-				@media (max-width: $hideAside) {
-					margin: 0 0 0px;
-				}
-
 				.container {
 					height: 100%;
 					display: grid;
@@ -496,14 +492,7 @@ body {
 					justify-content: center;
 					align-items: center;
 					padding: 0;
-					position: relative;
-
-					min-height: 100hv;
-
-					@media (max-width: $hideAside) {
-						padding-top: 200px;
-					}
-
+					position: relative;min-height: 1000px;
 
 
 					.left {
@@ -675,11 +664,7 @@ body {
 							width: 90%;
 							margin-bottom: 50px;
 
-							@media (max-width: $hideAside) {
-								margin-bottom: 200px;
-							}
-
-							@media (max-width: $hideAside) {
+							@media screen and (max-width: $hideAside) {
 								// margin-bottom: 70px;
 
 							}
@@ -783,7 +768,7 @@ body {
 					.copyright {
 						position: absolute;
 						right: 0;
-						bottom: 0px;
+						bottom: 20px;
 						color: var(--text-sub);
 
 						a {
@@ -798,10 +783,10 @@ body {
 						}
 					}
 
-
+					
 				}
 			}
-
+			
 			&.about {
 				> .container {
 					> p {
@@ -1083,7 +1068,7 @@ body {
 
 												}
 
-												@media (max-width: $hideAside) {
+												@media screen and (max-width: $hideAside) {
 													display: block;
 												}
 

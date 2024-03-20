@@ -373,7 +373,7 @@ body {
 			transition: 300ms;
 			display: none;
 			z-index: 10;
-			margin: 20px 0 50px;
+			margin-bottom: 50px;
 
 
 			@media (max-width: $hideAside) {
@@ -497,12 +497,8 @@ body {
 					align-items: center;
 					padding: 0;
 					position: relative;
-
-					min-height: 100hv;
-
-					@media (max-width: $hideAside) {
-						padding-top: 200px;
-					}
+					// min-height: 700px;
+					padding-top: 100px;
 
 
 
@@ -673,11 +669,7 @@ body {
 							border-left: 3px solid var(--skin-color);
 							padding-left: 20px;
 							width: 90%;
-							margin-bottom: 50px;
-
-							@media (max-width: $hideAside) {
-								margin-bottom: 200px;
-							}
+							margin-bottom: 200px;
 
 							@media (max-width: $hideAside) {
 								// margin-bottom: 70px;
@@ -783,7 +775,7 @@ body {
 					.copyright {
 						position: absolute;
 						right: 0;
-						bottom: 0px;
+						bottom: 20px;
 						color: var(--text-sub);
 
 						a {

@@ -673,11 +673,7 @@ body {
 							border-left: 3px solid var(--skin-color);
 							padding-left: 20px;
 							width: 90%;
-							margin-bottom: 50px;
-
-							@media (max-width: $hideAside) {
-								margin-bottom: 200px;
-							}
+							margin-bottom: 200px;
 
 							@media (max-width: $hideAside) {
 								// margin-bottom: 70px;

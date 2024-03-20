@@ -54,15 +54,11 @@ body {
 	line-height: 1.5;
 	min-width: 500px;
 	min-height: 100dvh;
-	max-height: 100dvh;
 	font-size: 16px;
-	overflow: hidden;
+	overflow-x: hidden;
 	background: var(--background-middle);
 
 	@media (max-width: $hideAside) {
-		overflow: visible;
-
-
 		&::-webkit-scrollbar {
 			width: 5px;
 		}
@@ -362,53 +358,18 @@ body {
 	main {
 		margin: 0 auto;
 
-		> nav {
-			position: sticky;
-			position: -webkit-sticky;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background: var(--background-max);
-			box-shadow: 0 0 10px var(--background-min);
-			transition: 300ms;
-			display: none;
-			z-index: 10;
-			margin: 20px 0 50px;
-
-
-			@media (max-width: $hideAside) {
-				display: block;
-			}
-
-			ul {
-				display: flex;
-				gap: 10px;
-				justify-content: space-around;
-				height: 50px;
-				align-items: center;
-
-				li {
-					a {
-						color: var(--skin-color);
-						font-weight: bold;
-					}
-				}
-			}
-		}
-
 		section {
 			max-width: 1850px;
 			background: var(--background-middle);
 			height: 100dvh;
 			position: absolute;
 			left: 270px;
-			padding: 0 15px 0 15px;
+			padding: 0 15px 0 30px;
 			top: 0;
 			right: 0;
 			z-index: 0;
 			opacity: 1;
 			overflow-x: hidden;
-			// min-height: 100vh;
 			overflow-y: scroll;
 			border-left: 1px solid var(--background-min);
 
@@ -440,8 +401,10 @@ body {
 
 			> .container {
 				padding: 20px 15px 50px 0;
-				// min-height: 700px;
-				height: 100%;
+				min-height: 700px;
+				min-height: 100vh;
+				height: auto;
+
 
 
 				> h1 {
@@ -485,10 +448,6 @@ body {
 				color: var(--text-main);
 				z-index: 1;
 
-				@media (max-width: $hideAside) {
-					margin: 0 0 0px;
-				}
-
 				.container {
 					height: 100%;
 					display: grid;
@@ -497,13 +456,6 @@ body {
 					align-items: center;
 					padding: 0;
 					position: relative;
-
-					min-height: 100hv;
-
-					@media (max-width: $hideAside) {
-						padding-top: 200px;
-					}
-
 
 
 					.left {
@@ -676,10 +628,6 @@ body {
 							margin-bottom: 50px;
 
 							@media (max-width: $hideAside) {
-								margin-bottom: 200px;
-							}
-
-							@media (max-width: $hideAside) {
 								// margin-bottom: 70px;
 
 							}
@@ -783,7 +731,7 @@ body {
 					.copyright {
 						position: absolute;
 						right: 0;
-						bottom: 0px;
+						bottom: 20px;
 						color: var(--text-sub);
 
 						a {
@@ -798,7 +746,36 @@ body {
 						}
 					}
 
+					nav {
+						position: absolute;
+						top: 100%;
+						left: 0;
+						width: 100%;
+						background: var(--background-max);
+						box-shadow: 0 0 10px var(--background-min);
+						transition: 300ms;
+						display: none;
 
+
+						@media (max-width: $hideAside) {
+							display: block;
+						}
+
+						ul {
+							display: flex;
+							gap: 10px;
+							justify-content: space-around;
+							height: 50px;
+							align-items: center;
+
+							li {
+								a {
+									color: var(--skin-color);
+									font-weight: bold;
+								}
+							}
+						}
+					}
 				}
 			}
 

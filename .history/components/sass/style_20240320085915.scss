@@ -497,11 +497,10 @@ body {
 					align-items: center;
 					padding: 0;
 					position: relative;
-
-					min-height: 100hv;
-
+					// min-height: 700px;
+					padding-top: 150px;
 					@media (max-width: $hideAside) {
-						padding-top: 200px;
+						margin: 0 0 0px;
 					}
 
 
@@ -673,11 +672,7 @@ body {
 							border-left: 3px solid var(--skin-color);
 							padding-left: 20px;
 							width: 90%;
-							margin-bottom: 50px;
-
-							@media (max-width: $hideAside) {
-								margin-bottom: 200px;
-							}
+							margin-bottom: 200px;
 
 							@media (max-width: $hideAside) {
 								// margin-bottom: 70px;

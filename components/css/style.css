@@ -41,11 +41,15 @@ body {
   line-height: 1.5;
   min-width: 500px;
   min-height: 100dvh;
+  max-height: 100dvh;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow: hidden;
   background: var(--background-middle);
 }
 @media (max-width: 910px) {
+  body {
+    overflow: visible;
+  }
   body::-webkit-scrollbar {
     width: 5px;
   }
@@ -288,13 +292,42 @@ body aside .theme:where(label) {
 body main {
   margin: 0 auto;
 }
+body main > nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--background-max);
+  box-shadow: 0 0 10px var(--background-min);
+  transition: 300ms;
+  display: none;
+  z-index: 10;
+  margin: 20px 0 50px;
+}
+@media (max-width: 910px) {
+  body main > nav {
+    display: block;
+  }
+}
+body main > nav ul {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+body main > nav ul li a {
+  color: var(--skin-color);
+  font-weight: bold;
+}
 body main section {
   max-width: 1850px;
   background: var(--background-middle);
   height: 100dvh;
   position: absolute;
   left: 270px;
-  padding: 0 15px 0 30px;
+  padding: 0 15px 0 15px;
   top: 0;
   right: 0;
   z-index: 0;
@@ -324,9 +357,7 @@ body main section::-webkit-scrollbar-thumb {
 }
 body main section > .container {
   padding: 20px 15px 50px 0;
-  min-height: 700px;
-  min-height: 100vh;
-  height: auto;
+  height: 100%;
 }
 body main section > .container > h1 {
   font-size: 40px;
@@ -363,6 +394,11 @@ body main section.home {
   color: var(--text-main);
   z-index: 1;
 }
+@media (max-width: 910px) {
+  body main section.home {
+    margin: 0 0 0px;
+  }
+}
 body main section.home .container {
   height: 100%;
   display: grid;
@@ -371,6 +407,12 @@ body main section.home .container {
   align-items: center;
   padding: 0;
   position: relative;
+  min-height: 100hv;
+}
+@media (max-width: 910px) {
+  body main section.home .container {
+    padding-top: 200px;
+  }
 }
 body main section.home .container .left {
   grid-column: 1/7;
@@ -507,6 +549,12 @@ body main section.home .container .left blockquote {
   border-left: 3px solid var(--skin-color);
   padding-left: 20px;
   width: 90%;
+  margin-bottom: 50px;
+}
+@media (max-width: 910px) {
+  body main section.home .container .left blockquote {
+    margin-bottom: 200px;
+  }
 }
 body main section.home .container .left blockquote q {
   color: var(--text-main);
@@ -585,7 +633,7 @@ body main section.home .container .right .links .link:hover i {
 body main section.home .container .copyright {
   position: absolute;
   right: 0;
-  bottom: 20px;
+  bottom: 0px;
   color: var(--text-sub);
 }
 body main section.home .container .copyright a {
@@ -596,32 +644,6 @@ body main section.home .container .copyright a {
 body main section.home .container .copyright a:hover {
   text-decoration: underline;
   color: var(--skin-color);
-}
-body main section.home .container nav {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: var(--background-max);
-  box-shadow: 0 0 10px var(--background-min);
-  transition: 300ms;
-  display: none;
-}
-@media (max-width: 910px) {
-  body main section.home .container nav {
-    display: block;
-  }
-}
-body main section.home .container nav ul {
-  display: flex;
-  gap: 10px;
-  justify-content: space-around;
-  height: 50px;
-  align-items: center;
-}
-body main section.home .container nav ul li a {
-  color: var(--skin-color);
-  font-weight: bold;
 }
 body main section.about > .container > p {
   color: var(--text-sub);
