@@ -1,17 +1,14 @@
-let Education = document.querySelector( "#education-container" );
+import { Education } from "../exports/Education.js";
 
-fetch( "data.json" ).then( ( response ) => {
-	response.json().then( ( data ) => {
-		data.education.map( ( card ) => {
-			Education.innerHTML +=
-				`
-				<li>
-					<div class="point"></div>
-					<div class="time"><i class="fa-solid fa-calendar"></i><span>${ card.startYear } - ${ card.finalYear }</span></div>
-					<h4>${ card.nameSchool }</h4>
-					<p>${ card.description }</p>
-				</li>
-				`;
-		} );
-	} );
-} );
+import { Consumer } from "../classes/Consumer.js";
+
+let contentTemplate = (object) => `
+<li>
+	<div class="point"></div>
+	<div class="time"><i class="fa-solid fa-calendar"></i><span>${object.startYear} - ${object.finalYear}</span></div>
+	<h4>${object.nameSchool}</h4>
+	<p>${object.description}</p>
+</li>
+`;
+
+new Consumer("#education-container", contentTemplate, Education);

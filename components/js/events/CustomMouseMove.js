@@ -2,8 +2,6 @@ const dotIn = document.querySelector( '.dot-in' );
 const dotOut = document.querySelector( '.dot-out' );
 const dotPointer = document.querySelector('.dot-pointer');
 
-
-
 document.addEventListener( 'mousemove', ( e ) => {
 	var x = e.clientX;
 	var y = e.clientY;

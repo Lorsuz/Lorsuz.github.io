@@ -1,19 +1,18 @@
-window.addEventListener( "scroll", () => {
+/* window.addEventListener( "scroll", () => {
 	var element = document.querySelector( "#back-to-top-btn" );
 	window.scrollY > 1000 ? element.classList.add( "appear" ) : element.classList.remove( "appear" );
-} );
+} ); */
 
-const menuLinks = document.querySelectorAll( 'a[href^="#"]' );
+const menuLinks = document.querySelectorAll( '#navbar-mobile a[href^="#"]' );
 
 function getDistanceFromTheTop ( element ) {
-	console.log( element );
 	const id = element.getAttribute( "href" );
 	return document.querySelector( id ).offsetTop;
 }
 
 function scrollToSection ( event ) {
 	event.preventDefault();
-	const distanceFromTheTop = getDistanceFromTheTop( event.target ) - 40;
+	const distanceFromTheTop = getDistanceFromTheTop( event.target ) - 20;
 	smoothScrollTo( 0, distanceFromTheTop );
 }
 
@@ -46,3 +45,20 @@ function smoothScrollTo ( endX, endY, duration ) {
 		window.scroll( newX, newY );
 	}, 1000 / 60 );
 }
+
+var sections = document.querySelectorAll( 'main > section' );
+
+function calcRect () {
+	sections.forEach( function ( section, index ) {
+		var rect = section.getBoundingClientRect();
+
+		if ( rect.top <= 50 && rect.bottom >= 50 ) {
+			menuLinks.forEach( function ( link ) {
+				link.classList.remove( 'active' );
+			} );
+			menuLinks[ index ].classList.add( 'active' );
+		}
+	} );
+}
+calcRect();
+window.addEventListener( 'scroll', calcRect );

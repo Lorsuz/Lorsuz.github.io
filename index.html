@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Lorsuz's Portfolio</title>
-		<meta name="description" content="Lorsuz portfolio, highlighting web development projects and design and programming skills.">
+		<meta name="description" content="Destacando projetos de desenvolvimento web, habilidades de design e programação de Ariel Souza.">
 		<meta name="keywords" content="portfólio, portfolio, Lorsuz, ariel, web developer, code, desenvolvimento web, design, programação, programmer">
 		<meta name="author" content="Lorsuz">
 		<link rel="stylesheet" href="components/css/style.css">
@@ -19,7 +19,38 @@
 			<div class="dot-out"></div>
 			<div class="dot-pointer"></div>
 		</div>
-		<a href="#home" id="back-to-top-btn"><i class="fa-solid fa-house"></i></a>
+		<div class="cookies-popup" id="cookiesPopup">
+			<p>Esse site usa cookies para garantir a persistência de dados relacionados a preferências de interface. Ao continuar navegando, você concorda com o armazenamento e coleta de cookies para esta aplicação?</p>
+			<div class="actions">
+				<button onclick="acceptCookies()">Aceitar</button>
+				<button onclick="rejectCookies()">Rejeitar</button>
+			</div>
+		</div>
+		<script>
+			const element = document.getElementById( "cookiesPopup" );
+
+			function acceptCookies () {
+				hidePopUp();
+				document.cookie = "acceptedCookies=true; expires=" + new Date( new Date().getTime() + 7 * 24 * 60 * 2 * 1000 ).toUTCString() + "; path=/";
+			}
+
+			function rejectCookies () {
+				hidePopUp();
+			}
+
+			function hidePopUp () {
+				element.style.animation = 'hidePopup 300ms ease';
+				element.classList.remove( 'show' );
+			}
+
+			window.onload = function () {
+				if ( document.cookie.indexOf( "acceptedCookies=true" ) === -1 ) {
+					setTimeout( () => element.classList.add( 'show' ), 2000 );
+				}
+			};
+
+		</script>
+		<!-- <a href="#home" id="back-to-top-btn"><i class="fa-solid fa-house"></i></a> -->
 		<aside>
 			<div class="logo"><a href="https://github.com/lorsuz" target="_blank"><span>L</span>orsuz</a></div>
 			<div class="nav-toggler">
@@ -28,36 +59,52 @@
 			<nav>
 				<ul>
 					<li><button class="active"><i class="fa fa-home"></i><span>Home</span></button></li>
-					<li><button><i class="fa fa-user"></i><span>About me</span></button></li>
-					<li><button><i class="fa fa-list"></i><span>Services</span></button></li>
-					<li><button><i class="fa-solid fa-award"></i><span>Highlights</span></button></li>
-					<li><button><i class="fa fa-briefcase"></i><span>Projects</span></button></li>
-					<li><button><i class="fa fa-comments"></i><span>Contact</span></button></li>
+					<li><button><i class="fa fa-user"></i><span>Sobre mim</span></button></li>
+					<li><button><i class="fa fa-list"></i><span>Serviços</span></button></li>
+					<li><button><i class="fa-solid fa-award"></i><span>Destaques</span></button></li>
+					<li><button><i class="fa fa-briefcase"></i><span>Projetos</span></button></li>
+					<li><button><i class="fa fa-comments"></i><span>Contato</span></button></li>
 				</ul>
 			</nav>
-			<div class="theme">
+			<div class="theme" id="theme">
 				<label for="color"><i class="fa-solid fa-palette"></i></label>
 				<input type="color" id="color">
 				<button class="mode"><i class="fa-solid fa-sun"></i></button>
 			</div>
 		</aside>
+		<nav id="navbar-mobile">
+			<ul>
+				<li><a href="#home"><i class="fa fa-home"></i><span>Home</span></a></li>
+				<li><a href="#about"><i class="fa fa-user"></i><span>Sobre mim</span></a></li>
+				<li><a href="#services"><i class="fa fa-list"></i><span>Serviços</span></a></li>
+				<li><a href="#highlights"><i class="fa-solid fa-award"></i><span>Destaques</span></a></li>
+				<li><a href="#projects"><i class="fa fa-briefcase"></i><span>Projetos</span></a></li>
+				<li><a href="#contact"><i class="fa fa-comments"></i><span>Contato</span></a></li>
+			</ul>
+			</ul>
+		</nav>
 		<main>
 			<section class="home" id="home">
 				<div class="container">
+					<div class="theme" id="theme">
+						<label for="color"><i class="fa-solid fa-palette"></i></label>
+						<input type="color" id="color">
+						<button class="mode"><i class="fa-solid fa-sun"></i></button>
+						<script src="components/js/classes/Color.js"></script>
+						<script src="components/js/classes/Mode.js"></script>
+					</div>
 					<div class="left">
-						<h1>Hi, my name is <span>Ariel Souza</span> </h1>
-						<h2>I am &#60;<span class="typing" id="typing">Developer</span>&#47;&#62;
-							<!-- <span class="and">&</span> &#36;<span class="typing">Programmer</span> -->
+						<h1>Olá, meu nome é <span>Ariel Souza</span> </h1>
+						<h2>Sou um &#60;<span class="typing" id="typing">desenvolvedor Web</span>&#47;&#62;
 						</h2>
-						
-						<p>I have talents in coding and a lot of desire to learn. I have dedicated myself to improving my
-							programming skills through self-study and practice projects.</p>
+						<p><span>Técnico em Informática</span> com habilidades versáteis para aprender e desenvolver <span>Aplicações Web</span> com ou sem uso de <span>Frameworks</span>, com domínio sobre tecnologias de <span>Frontend</span> & <span>Backend</span>.</p>
 						<div class="actions">
-							<a href="components/static/pdf/ArielSouza-Curriculum.pdf" target="_blank">Curriculum
+							<a href="components/static/pdf/ArielSouza-Curriculum.pdf" target="_blank">
 								<div class="border"></div>
 								<div class="border"></div>
 								<div class="border"></div>
 								<div class="border"></div>
+								<i class="fa-solid fa-arrow-up-right-from-square"></i>Currículo
 							</a>
 							<article class="links">
 								<a href="https://github.com/lorsuz" target="_blank" class="link github"><i class="fa-brands fa-github"></i></a>
@@ -67,7 +114,7 @@
 						</div>
 						<blockquote>
 							<!-- <q>Ser desenvolvedor é uma viagem onde a próxima parada é a solução de um problema.</q> -->
-							<q>And even if everything goes wrong, you can still start over from scratch.</q>
+							<q>Mesmo que tudo dê errado, você ainda pode recomeçar do zero!</q>
 							<cite>- Barusu</cite>
 						</blockquote>
 					</div>
@@ -84,40 +131,29 @@
 					<span class="copyright">&copy; Inspired by <a href="https://www.youtube.com/watch?v=zJE-ze4TfXc" target="_blank">@Cryptical Coder</a></span>
 				</div>
 			</section>
-			<nav id="navbar">
-				<ul>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#highlights">Highlights</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
 			<section class="about" id="about">
 				<div class="container">
-					<h1>About me</h1>
-					<h2>Hello @everyone!</h2>
-					<p>I have completed several projects that showcase my skills, including creating website applications and
-						working on algorithm challenges. My area of expertise is in web development, where I have achieved
-						proficiency in HTML, CSS, JavaScript and various front-end and back-end technologies such as NodeJs and PHP.
-						I'm excited to continue growing as a developer and facing new challenges in the world of programming.</p>
+					<h1>Sobre mim</h1>
+					<h2>Olá @everyone!</h2>
+					<p>Este portfólio, feito apenas em HTML, CSS e JS, reúne informações sobre minha vida profissional e alguns dos projetos realizados ao longo da minha carreira. Meu objetivo é me tornar um desenvolvedor fullstack com habilidades na criação e desenvolvimento de designs excelentes para os usuários e obter nível de excelência em programação e desenvolvimento de software.</p>
 					<div class="grid-container">
 						<div class="data-self">
 							<ul class="data">
-								<li><span>Gender: </span>Male</li>
-								<li><span>Formation: </span>IFPB</li>
-								<li><span>Birth: </span>05/09/2005</li>
-								<li><span>Nationality: </span>Brazil</li>
-								<li><span>Profession: </span> Freelancer</li>
+								<li><span>Gênero: </span>Masculino</li>
+								<li><span>Formação: </span>IFPB</li>
+								<li><span>Nascimento: </span>05/09/2005</li>
+								<li><span>Nacionalidade: </span>Brasil</li>
+								<li><span>Profissão: </span> Freelancer</li>
 								<li><span>Id Lattes: </span>4320081615495213</li>
-								<li><span>Expertise: </span>Programming Logic</li>
-								<li><span>Certificate: </span>Computer Technician</li>
+								<li><span>Forte: </span>Lógica de Programação</li>
+								<li><span>Diploma: </span>Técnico de Informática</li>
 							</ul>
 							<div class="btn">
-								<a href="components/static/pdf/ArielSouza-CoverLetter.pdf" download="ArielSouza-CoverLetter.pdf" rel="external" target="_blank" type="application/pdf"><i class="fa-solid fa-download"></i><span>Cover Letter</span></a>
-								<a href="components/static/pdf/ArielSouza-Curriculum.pdf" download="ArielSouza-Curriculum.pdf" rel="external" target="_blank" type="application/pdf"><i class="fa-solid fa-download"></i><span>Curriculum</span></a>
+								<a href="components/static/pdf/ArielSouza-CoverLetter.pdf" target="_blank"><i class="fa-solid fa-file"></i><span>Apresentação</span></a>
+								<a href="components/static/pdf/ArielSouza-Curriculum.pdf" download="ArielSouza-Curriculum.pdf" rel="external" target="_blank" type="application/pdf"><i class="fa-solid fa-download"></i><span>Currículo</span></a>
 							</div>
 							<div class="education">
-								<h3>Sources of Knowledge</h3>
+								<h3>Formação</h3>
 								<div class="contain">
 									<div class="line"></div>
 									<ul id="education-container"></ul>
@@ -125,19 +161,28 @@
 							</div>
 							<div class="xp">
 								<h3>Experience</h3>
-								<div class="slides">
-									<div class="prev"><i class="fa-solid fa-chevron-left"></i></div>
-									<div class="next"><i class="fa-solid fa-chevron-right"></i></div>
-									<ul id="experience-container"></ul>
-									<ul class="dots-container"></ul>
+								<div class="xp-container">
+									<div class="pagination">
+										<ul></ul>
+									</div>
+									<div class="cards">
+										<ul></ul>
+									</div>
+									
 								</div>
 							</div>
 						</div>
-						<div class="hardSkills">
-							<h3>Hard Skills</h3>
-							<span>There are floating boxes!</span>
-							<div id="hardSkills-container"></div>
-						</div>
+						<aside>
+							<div class="technologies">
+								<h3>Conhecimento Técnico</h3>
+								<ul id="skills-container"></ul>
+							</div>
+							<div class="courses">
+								<h3>Cursos</h3>
+								<span>Existem caixas flutuantes!</span>
+								<div id="courses-container"></div>
+							</div>
+						</aside>
 					</div>
 				</div>
 			</section>
@@ -271,27 +316,27 @@
 					</ul>
 					<div class="title">
 						<h2>Send me an E-mail</h2>
-						<span>I very responsive to messages</span>
+						<span>Logo farei contato em resposta</span>
 					</div>
 					<form action="https://formspree.io/f/xzbnvkwn" method="POST" id="contact-form">
 						<div class="camp">
-							<label for="name">Name:</label>
-							<input type="text" name="name" id="name" placeholder="Your name" required>
+							<label for="name">Nome completo:</label>
+							<input type="text" name="name" id="name" placeholder="Seu nome" required>
 						</div>
 						<div class="camp">
-							<label for="email">E-mail:</label>
-							<input type="text" name="email" id="email" placeholder="Your E-mail" required>
+							<label for="email">Seu e-mail:</label>
+							<input type="text" name="email" id="email" placeholder="E-mail para contato" required>
 						</div>
 						<div class="camp">
-							<label for="subject">Subject:</label>
-							<input type="text" name="subject" id="subject" placeholder="Subject" required>
+							<label for="subject">Assunto:</label>
+							<input type="text" name="subject" id="subject" placeholder="Assunto a tratar" required>
 						</div>
 						<div class="camp">
-							<label for="request">Request:</label>
-							<textarea name="request" id="request" cols="30" rows="10" placeholder="Describe the request" required></textarea>
+							<label for="request">Solicitação:</label>
+							<textarea name="request" id="request" cols="30" rows="10" placeholder="Descreva sua solicitação" required></textarea>
 						</div>
 						<div class="button">
-							<button type="submit" id="submit-button">Send e-mail</button>
+							<button type="submit" id="submit-button">Enviar e-mail</button>
 						</div>
 					</form>
 				</div>

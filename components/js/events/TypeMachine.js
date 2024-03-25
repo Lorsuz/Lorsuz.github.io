@@ -1,6 +1,6 @@
 const typeMachineElement = document.getElementById( 'typing' );
 typeMachineElement.textContent = '';
-const words = [ 'Fullstack', 'Freelancer', 'Computer Technician', 'Programmer', 'Web Developer' ];
+const words = [ 'Freelancer','Dev FullStack', 'Técnico de TI', 'Programador', 'Desenvolvedor Web' ];
 let index = 0;
 let currentWord = '';
 

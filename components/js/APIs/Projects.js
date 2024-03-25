@@ -1,42 +1,40 @@
-let Projects = document.querySelector( "#projects-container" );
+import { Projects } from "../exports/Projects.js";
 
-fetch( "data.json" ).then( ( response ) => {
-	response.json().then( ( data ) => {
-		data.projects.map( ( card ) => {
-			Projects.innerHTML +=
-				`
-				<li class="card">
-					<div class="img"><img src="components/static/img/projects/${ card.image }" alt="${ card.image }">
-					</div>
-					<div class="animation">
-						<div class="details">
-						<h3>${ card.project }</h3>
-							<div class="skill-tags">${ card.skills.map( ( skill ) => {
+import { Consumer } from "../classes/Consumer.js";
+
+let contentTemplate = (object) => `
+<li class="card">
+	<div class="img">
+		<img src="components/static/img/projects/${ object.image }" alt="${ object.image }">
+	</div>
+	<div class="animation">
+		<div class="details">
+		<h3>${ object.project }</h3>
+			<div class="skill-tags">${ object.skills.map( ( skill ) => {
 					return `<span class="tag">${ skill }</span>`;
-				} ).join( "" )
+					} ).join( "" )
 				}
-							</div>
-							<p>${ card.description }</p>
-							<div class="links">
-							${ card.repository ?
-								`<a href="https://github.com/Lorsuz/${ card.repository }" target="_blank">Repository</a>` :
-								""
-							}
-							
-							${ card.pages ?
-								`<a href="${ card.pages }" target="_blank">Web Site</a>` :
-								""
-							}
+			</div>
+			<p>${ object.description }</p>
+			<div class="links">
+			${ object.repository ?
+				`<a href="https://github.com/Lorsuz/${ object.repository }" target="_blank">Repository</a>` :
+				""
+			}
+			
+			${ object.pages ?
+				`<a href="${ object.pages }" target="_blank">Web Site</a>` :
+				""
+			}
 
-							${ !card.pages && !card.repository ?
-								`<span>There're no links available for this project yet!!</span>` :
-								""
-							}
-							</div>
-						</div>
-					</div>
-				</li>
-				`;
-		} );
-	} );
-} );
+			${ !object.pages && !object.repository ?
+				`<span>There're no links available for this project yet!!</span>` :
+				""
+			}
+			</div>
+		</div>
+	</div>
+</li>
+`;
+
+new Consumer("#projects-container", contentTemplate, Projects);

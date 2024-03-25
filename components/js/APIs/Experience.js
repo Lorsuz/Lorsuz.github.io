@@ -1,41 +1,26 @@
-import Slide from "../classes/Slide.js";
+import { Experience } from "../exports/Experience.js";
 
-let Experience = document.querySelector( "#experience-container" );
-let dotsContainer = document.querySelector( ".data-self .xp .slides .dots-container" );
+import { Consumer } from "../classes/Consumer.js";
 
-async function fetchData () {
-	try {
-		const response = await fetch( "data.json" );
-		const data = await response.json();
+let buttonContentTemplate = ( object ) => `
+	<li>
+		<div class="progress-container">
+			<div class="progress-bar"></div>
+		</div>
+		<span>${ object.buttonContent }</span>
+	</li>
+`;
 
-		data.experience.forEach( ( card, index ) => {
-			Experience.innerHTML +=
-				` 
-        <li class="slides-pag ${ index == 0 ? "active" : "" }">
-          <h4>${ card.area }</h4>
-						<div class="description">
-							<div class="icon">
-								<i class="${card.icon}"></i>
-							</div>
-							<p>${ card.description }</p>
-						</div>
-        </li>
-        `;
-			dotsContainer.innerHTML += `<li class="dot ${ index == 0 ? "active" : "" }"></li>`;
-		} );
+let cardContentTemplate = ( object ) => `
+<li>
+	<h4>${ object.area }</h4>
+	<h5><i class="${ object.icon }"></i><span>${ object.buttonContent }</span></h5>
+	<p>${ object.desc }</p>
+</li>
+`;
 
-		new Slide(
-			".data-self .xp .slides #experience-container li",
-			".data-self .xp .slides .prev",
-			".data-self .xp .slides .next",
-			".data-self .xp .slides .dots-container .dot"
-		);
-	} catch ( error ) {
-		console.error( "Error fetching data:", error );
-	}
-}
+new Consumer( ".xp-container .pagination ul", buttonContentTemplate, Experience );
 
-fetchData();
-
+new Consumer( ".xp-container .cards ul", cardContentTemplate, Experience );
 
 

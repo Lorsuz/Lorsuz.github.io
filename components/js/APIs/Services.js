@@ -1,16 +1,13 @@
-let Services = document.querySelector( "#services-container" );
+import { Services } from "../exports/Services.js";
 
-fetch( "data.json" ).then( ( response ) => {
-	response.json().then( ( data ) => {
-		data.services.map( ( card ) => {
-			Services.innerHTML +=
-				`
-				<li class="card">
-					<div class="i"><i class="fas fa-${card.icon}"></i></div>
-					<h2>${card.service}</h2>
-					<p>${card.description}</p>
-				</li>
-				`;
-		} );
-	} );
-} );
+import { Consumer } from "../classes/Consumer.js";
+
+let contentTemplate = ( object ) => `
+<li class="card">
+	<div class="i"><i class="fas fa-${ object.icon }"></i></div>
+	<h2>${ object.service }</h2>
+	<p>${ object.description }</p>
+</li>
+`;
+
+new Consumer( "#services-container", contentTemplate, Services );

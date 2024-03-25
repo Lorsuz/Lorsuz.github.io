@@ -87,6 +87,112 @@ body .dot-cursor .dot-pointer {
   background: var(--text-sub);
   opacity: 0;
 }
+body .cookies-popup {
+  position: fixed;
+  left: 50%;
+  background-color: var(--background-max);
+  padding: 15px 20px;
+  border: 1px solid var(--background-min);
+  border-radius: 5px;
+  z-index: 9999;
+  transform: translateX(-50%);
+  max-width: 950px;
+  width: 90%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  bottom: 25px;
+  gap: 20px;
+}
+body .cookies-popup p {
+  font-size: 0.8rem;
+  text-align: justify;
+  color: var(--text-main);
+}
+body .cookies-popup .actions {
+  display: flex;
+  gap: 10px;
+}
+body .cookies-popup .actions button {
+  font-size: 0.8rem;
+  padding: 8px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--skin-color);
+  background-color: var(--background-max);
+  border: 3px solid transparent;
+}
+body .cookies-popup .actions button:nth-child(1) {
+  border-color: var(--skin-color);
+}
+body .cookies-popup .actions button:nth-child(1):hover {
+  color: var(--background-max);
+  background-color: var(--skin-color);
+}
+body .cookies-popup .actions button:nth-child(2) {
+  box-shadow: 0 0 15px var(--background-min);
+}
+body .cookies-popup .actions button:nth-child(2):hover {
+  color: var(--background-max);
+  background-color: var(--skin-color);
+}
+body .cookies-popup.show {
+  display: flex;
+  animation: showPopup 300ms ease;
+}
+@keyframes showPopup {
+  from {
+    display: flex;
+    transform: translate(-50%, 100%);
+  }
+  to {
+    display: flex;
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes hidePopup {
+  from {
+    display: flex;
+    transform: translate(-50%, 0);
+  }
+  to {
+    display: flex;
+    transform: translate(-50%, 100%);
+  }
+}
+@media (max-width: 700px) {
+  body .cookies-popup {
+    flex-direction: column;
+  }
+  body .cookies-popup p {
+    font-size: 0.85rem;
+  }
+  body .cookies-popup .actions button {
+    font-size: 0.9rem;
+    padding: 10px 35px;
+  }
+}
+@media (max-width: 550px) {
+  body .cookies-popup {
+    width: 100%;
+    left: 50%;
+    bottom: 0;
+    padding: 25px;
+    border-radius: 20px 20px 0 0;
+  }
+  body .cookies-popup p {
+    font-size: 1rem;
+  }
+  body .cookies-popup .actions {
+    width: 100%;
+  }
+  body .cookies-popup .actions button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
 body #back-to-top-btn {
   display: none;
   align-items: center;
@@ -118,7 +224,7 @@ body #back-to-top-btn:hover i {
 body #back-to-top-btn.appear {
   display: flex;
 }
-body aside {
+body > aside {
   padding: 30px;
   width: 270px;
   background: var(--background-max);
@@ -134,16 +240,16 @@ body aside {
   flex-direction: column;
 }
 @media (max-width: 910px) {
-  body aside {
+  body > aside {
     display: none;
   }
 }
-body aside .logo {
+body > aside .logo {
   position: absolute;
   top: 50px;
   font-size: 30px;
 }
-body aside .logo a {
+body > aside .logo a {
   text-transform: capitalize;
   color: var(--text-main);
   font-weight: 700;
@@ -152,7 +258,7 @@ body aside .logo a {
   letter-spacing: 5px;
   position: relative;
 }
-body aside .logo a::before {
+body > aside .logo a::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -162,7 +268,7 @@ body aside .logo a::before {
   bottom: 0;
   left: 0;
 }
-body aside .logo a::after {
+body > aside .logo a::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -172,11 +278,11 @@ body aside .logo a::after {
   top: 0;
   right: 0;
 }
-body aside .logo a span {
+body > aside .logo a span {
   font-family: "Clicker Script", cursive;
   font-size: 40px;
 }
-body aside .nav-toggler {
+body > aside .nav-toggler {
   height: 40px;
   width: 45px;
   border: 1px solid var(--background-min);
@@ -192,7 +298,7 @@ body aside .nav-toggler {
   background: var(--background-max);
   display: none;
 }
-body aside .nav-toggler span {
+body > aside .nav-toggler span {
   height: 3px;
   width: 60%;
   background: var(--skin-color);
@@ -200,15 +306,15 @@ body aside .nav-toggler span {
   border-radius: 30px;
   margin: 3px 0;
 }
-body aside nav {
+body > aside nav {
   margin: 100px 0;
 }
-body aside nav ul li {
+body > aside nav ul li {
   margin-bottom: 20px;
   display: block;
   position: relative;
 }
-body aside nav ul li button {
+body > aside nav ul li button {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -221,18 +327,18 @@ body aside nav ul li button {
   padding: 5px 15px;
   background: transparent;
 }
-body aside nav ul li button i {
+body > aside nav ul li button i {
   margin-right: 10px;
   transition: 500ms;
 }
-body aside nav ul li button span {
+body > aside nav ul li button span {
   transition: 500ms;
 }
-body aside nav ul li button:hover span {
+body > aside nav ul li button:hover span {
   color: var(--text-main);
   text-shadow: 0px 0px 1px var(--text-main);
 }
-body aside nav ul li button::before {
+body > aside nav ul li button::before {
   content: "";
   position: absolute;
   width: 0%;
@@ -243,59 +349,55 @@ body aside nav ul li button::before {
   background: var(--skin-color);
   transition: 300ms;
 }
-body aside nav ul li button.active {
+body > aside nav ul li button.active {
   color: var(--skin-color);
   cursor: default;
 }
-body aside nav ul li button.active * {
+body > aside nav ul li button.active * {
   cursor: default;
 }
-body aside nav ul li button.active::before {
+body > aside nav ul li button.active::before {
   content: "";
   width: 100%;
   left: 0%;
 }
-body aside nav ul li button.active span {
+body > aside nav ul li button.active span {
   text-shadow: none;
   color: var(--skin-color);
 }
-body aside .theme {
+body > aside .theme {
   width: 40%;
   display: flex;
   justify-content: space-between;
 }
-body aside .theme label {
+body > aside .theme label {
   cursor: pointer;
   padding: 5px;
 }
-body aside .theme label i {
+body > aside .theme label i {
   color: var(--skin-color);
   font-size: 25px;
 }
-body aside .theme input {
+body > aside .theme input {
   display: none;
 }
-body aside .theme button {
+body > aside .theme button {
   border: none;
   background: transparent;
   padding: 5px;
 }
-body aside .theme button i {
+body > aside .theme button i {
   color: var(--skin-color);
   font-size: 25px;
 }
-body aside .theme:where(label) {
+body > aside .theme:where(label) {
   color: var(--skin-color);
   font-size: 25px;
   transition: transform 500ms ease-in-out;
 }
-body main {
-  margin: 0 auto;
-}
-body main > nav {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+body nav#navbar-mobile {
+  position: fixed;
+  bottom: 0;
   left: 0;
   width: 100%;
   background: var(--background-max);
@@ -303,36 +405,74 @@ body main > nav {
   transition: 300ms;
   display: none;
   z-index: 10;
-  margin: 20px 0 50px;
+  box-shadow: 0 -3px 0px var(--background-min);
 }
 @media (max-width: 910px) {
-  body main > nav {
+  body nav#navbar-mobile {
     display: block;
   }
 }
-body main > nav ul {
+body nav#navbar-mobile ul {
   display: flex;
   gap: 10px;
   justify-content: space-around;
-  height: 50px;
+  padding: 10px;
   align-items: center;
 }
-body main > nav ul li a {
-  color: var(--skin-color);
+body nav#navbar-mobile ul li a {
+  color: var(--text-main);
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 10px;
+  flex-direction: column;
+}
+body nav#navbar-mobile ul li a.active {
+  color: var(--skin-color);
+}
+body nav#navbar-mobile ul li a i {
+  font-size: 2rem;
+  pointer-events: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+body nav#navbar-mobile ul li a span {
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+@media (max-width: 650px) {
+  body nav#navbar-mobile ul li a i {
+    width: 60px;
+    height: 60px;
+  }
+  body nav#navbar-mobile ul li a span {
+    display: none;
+  }
+  body nav#navbar-mobile ul li a.active {
+    color: var(--skin-color);
+  }
+  body nav#navbar-mobile ul li a.active i {
+    box-shadow: 0 8px 20px #ccc;
+  }
+}
+body main {
+  margin: 0 auto;
 }
 body main section {
-  max-width: 1850px;
   background: var(--background-middle);
   height: 100dvh;
   position: absolute;
   left: 270px;
-  padding: 0 15px 0 15px;
   top: 0;
   right: 0;
   z-index: 0;
   opacity: 1;
   overflow-x: hidden;
+  padding: 0 15px;
   overflow-y: scroll;
   border-left: 1px solid var(--background-min);
 }
@@ -343,7 +483,6 @@ body main section {
     position: static;
     overflow: visible;
     height: auto;
-    margin: 0 0 100px;
   }
 }
 body main section::-webkit-scrollbar {
@@ -356,8 +495,10 @@ body main section::-webkit-scrollbar-thumb {
   background: var(--skin-color);
 }
 body main section > .container {
-  padding: 20px 15px 50px 0;
-  height: 100%;
+  min-height: 700px;
+  max-width: 1650px;
+  margin: 50px auto 0;
+  padding: 0px 0 100px;
 }
 body main section > .container > h1 {
   font-size: 40px;
@@ -396,7 +537,7 @@ body main section.home {
 }
 @media (max-width: 910px) {
   body main section.home {
-    margin: 0 0 0px;
+    margin: 0px;
   }
 }
 body main section.home .container {
@@ -405,9 +546,10 @@ body main section.home .container {
   grid-template-columns: repeat(12, 1fr);
   justify-content: center;
   align-items: center;
-  padding: 0;
   position: relative;
   min-height: 100hv;
+  margin: 0;
+  padding: 0;
 }
 @media (max-width: 910px) {
   body main section.home .container {
@@ -415,9 +557,10 @@ body main section.home .container {
   }
 }
 body main section.home .container .left {
-  grid-column: 1/7;
+  grid-column: 1/8;
+  grid-row: 1/2;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   body main section.home .container .left {
     grid-column: 1/13;
   }
@@ -434,7 +577,7 @@ body main section.home .container .left h1 span {
 }
 body main section.home .container .left h2 {
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 28px;
 }
 body main section.home .container .left h2 span.typing {
   color: var(--skin-color);
@@ -450,11 +593,14 @@ body main section.home .container .left p {
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
+body main section.home .container .left p span {
+  font-weight: bold;
+}
 body main section.home .container .left .actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px 50px;
+  gap: 30px 50px;
   margin-bottom: 50px;
 }
 body main section.home .container .left .actions > a {
@@ -467,10 +613,13 @@ body main section.home .container .left .actions > a {
   color: var(--text-main);
   white-space: nowrap;
   transition: all 300ms ease;
-  margin-bottom: 30px;
   position: relative;
   top: 0px;
   left: 0px;
+}
+body main section.home .container .left .actions > a i {
+  margin-right: 10px;
+  font-size: 22px;
 }
 body main section.home .container .left .actions > a .border {
   position: absolute;
@@ -524,14 +673,16 @@ body main section.home .container .left .actions > a:hover .border:nth-child(4) 
 }
 body main section.home .container .left .actions .links {
   display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   body main section.home .container .left .actions .links {
-    display: block;
+    display: flex;
   }
 }
 body main section.home .container .left .actions .links .link {
-  margin: 10px;
   position: relative;
   top: 0;
 }
@@ -552,7 +703,7 @@ body main section.home .container .left blockquote {
 }
 @media (max-width: 910px) {
   body main section.home .container .left blockquote {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
   }
 }
 body main section.home .container .left blockquote q {
@@ -568,8 +719,9 @@ body main section.home .container .right {
   justify-content: center;
   align-items: center;
   grid-column: 7/13;
+  grid-row: 1/2;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   body main section.home .container .right {
     display: none;
   }
@@ -629,9 +781,50 @@ body main section.home .container .right .links .link:hover {
 body main section.home .container .right .links .link:hover i {
   color: var(--skin-color);
 }
-body main section.home .container .copyright {
+body main section.home .container .theme {
+  display: none;
+  justify-content: space-between;
   position: absolute;
   right: 0;
+  top: 50px;
+  gap: 15px;
+}
+@media (max-width: 910px) {
+  body main section.home .container .theme {
+    display: flex;
+  }
+}
+body main section.home .container .theme i {
+  width: 35px;
+}
+body main section.home .container .theme label {
+  cursor: pointer;
+  padding: 5px;
+}
+body main section.home .container .theme label i {
+  color: var(--skin-color);
+  font-size: 30px;
+}
+body main section.home .container .theme input {
+  display: none;
+}
+body main section.home .container .theme button {
+  border: none;
+  background: transparent;
+  padding: 5px;
+}
+body main section.home .container .theme button i {
+  color: var(--skin-color);
+  font-size: 30px;
+}
+body main section.home .container .theme:where(label) {
+  color: var(--skin-color);
+  font-size: 25px;
+  transition: transform 500ms ease-in-out;
+}
+body main section.home .container .copyright {
+  position: absolute;
+  right: 0px;
   bottom: 0px;
   color: var(--text-sub);
 }
@@ -649,30 +842,30 @@ body main section.about > .container > p {
   margin-bottom: 30px;
   text-align: justify;
 }
-body main section.about .container h2 {
+body main section.about > .container h2 {
   color: var(--text-main);
   font-size: 25px;
 }
-body main section.about .container .grid-container {
+body main section.about > .container .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
 }
-body main section.about .container .grid-container .data-self {
+body main section.about > .container .grid-container .data-self {
   grid-column: 1/9;
 }
 @media (max-width: 1230px) {
-  body main section.about .container .grid-container .data-self {
+  body main section.about > .container .grid-container .data-self {
     grid-column: 1/13;
   }
 }
-body main section.about .container .grid-container .data-self ul.data {
+body main section.about > .container .grid-container .data-self ul.data {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
-body main section.about .container .grid-container .data-self ul.data li {
+body main section.about > .container .grid-container .data-self ul.data li {
   width: 48%;
   height: 40px;
   display: flex;
@@ -680,47 +873,66 @@ body main section.about .container .grid-container .data-self ul.data li {
   border-bottom: 1px solid var(--background-min);
   color: var(--text-sub);
 }
-body main section.about .container .grid-container .data-self ul.data li span {
+body main section.about > .container .grid-container .data-self ul.data li:nth-child(6) {
+  user-select: text;
+}
+@media (max-width: 590px) {
+  body main section.about > .container .grid-container .data-self ul.data li:nth-child(7), body main section.about > .container .grid-container .data-self ul.data li:nth-child(8) {
+    display: none;
+  }
+}
+body main section.about > .container .grid-container .data-self ul.data li span {
   color: var(--text-main);
   font-weight: 900;
   padding-right: 5px;
 }
-body main section.about .container .grid-container .data-self .btn {
+body main section.about > .container .grid-container .data-self .btn {
   width: 100%;
   margin-bottom: 70px;
   display: flex;
-  flex-wrap: wrap;
   gap: 15px;
 }
-body main section.about .container .grid-container .data-self .btn a {
+body main section.about > .container .grid-container .data-self .btn a {
   display: block;
-  padding: 10px 30px;
+  padding: 15px 50px;
   border-radius: 50px;
   border: none;
   background: var(--skin-color);
   color: var(--background-middle);
   transition: all 300ms ease;
   opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body main section.about .container .grid-container .data-self .btn a i {
+body main section.about > .container .grid-container .data-self .btn a i {
   margin-right: 10px;
   font-size: 22px;
 }
-body main section.about .container .grid-container .data-self .btn a span {
+body main section.about > .container .grid-container .data-self .btn a span {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 900;
   white-space: nowrap;
+  letter-spacing: 1px;
 }
-body main section.about .container .grid-container .data-self .btn a:hover {
+body main section.about > .container .grid-container .data-self .btn a:hover {
   opacity: 1;
 }
-body main section.about .container .grid-container .data-self .education h3 {
+@media (max-width: 600px) {
+  body main section.about > .container .grid-container .data-self .btn {
+    justify-content: space-between;
+  }
+  body main section.about > .container .grid-container .data-self .btn a {
+    width: 50%;
+  }
+}
+body main section.about > .container .grid-container .data-self .education h3 {
   margin-bottom: 20px;
   font-size: 30px;
   color: var(--text-main);
   text-align: center;
 }
-body main section.about .container .grid-container .data-self .education .contain {
+body main section.about > .container .grid-container .data-self .education .contain {
   background: var(--background-max);
   border-radius: 10px;
   padding: 30px 25px;
@@ -730,7 +942,7 @@ body main section.about .container .grid-container .data-self .education .contai
   box-shadow: 0 0 10px var(--background-min);
   position: relative;
 }
-body main section.about .container .grid-container .data-self .education .contain::before {
+body main section.about > .container .grid-container .data-self .education .contain::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -742,7 +954,7 @@ body main section.about .container .grid-container .data-self .education .contai
   transition: 300ms;
   opacity: 1;
 }
-body main section.about .container .grid-container .data-self .education .contain ul li {
+body main section.about > .container .grid-container .data-self .education .contain ul li {
   position: relative;
   padding-left: 23px;
   border-left: 5px solid var(--skin-color);
@@ -750,11 +962,11 @@ body main section.about .container .grid-container .data-self .education .contai
   padding-bottom: 30px;
   text-align: justify;
 }
-body main section.about .container .grid-container .data-self .education .contain ul li:last-child {
+body main section.about > .container .grid-container .data-self .education .contain ul li:last-child {
   border-left: 5px solid transparent;
   padding-bottom: 0px;
 }
-body main section.about .container .grid-container .data-self .education .contain ul li .point {
+body main section.about > .container .grid-container .data-self .education .contain ul li .point {
   width: 20px;
   height: 20px;
   background: var(--skin-color);
@@ -762,208 +974,256 @@ body main section.about .container .grid-container .data-self .education .contai
   position: absolute;
   transform: translateX(-178%);
 }
-body main section.about .container .grid-container .data-self .education .contain ul li .time {
+body main section.about > .container .grid-container .data-self .education .contain ul li .time {
   margin-bottom: 10px;
   color: var(--text-sub);
 }
-body main section.about .container .grid-container .data-self .education .contain ul li .time i {
+body main section.about > .container .grid-container .data-self .education .contain ul li .time i {
   margin-right: 8px;
   color: var(--text-main);
 }
-body main section.about .container .grid-container .data-self .education .contain ul li .time span {
+body main section.about > .container .grid-container .data-self .education .contain ul li .time span {
   color: var(--text-sub);
 }
-body main section.about .container .grid-container .data-self .education .contain ul li h4 {
+body main section.about > .container .grid-container .data-self .education .contain ul li h4 {
   color: var(--text-main);
   font-size: 20px;
   margin-bottom: 5px;
 }
-body main section.about .container .grid-container .data-self .education .contain ul li p {
+body main section.about > .container .grid-container .data-self .education .contain ul li p {
   color: var(--text-sub);
 }
-body main section.about .container .grid-container .data-self .xp {
+body main section.about > .container .grid-container .data-self .xp {
   margin: 0 auto 50px;
 }
-body main section.about .container .grid-container .data-self .xp h3 {
+body main section.about > .container .grid-container .data-self .xp h3 {
   text-align: center;
   font-size: 30px;
   color: var(--text-main);
   margin-bottom: 25px;
 }
-body main section.about .container .grid-container .data-self .xp .slides {
-  position: relative;
-  padding: 20px 50px;
-  overflow: hidden;
-  border-radius: 10px;
-  background: var(--background-max);
-  background-size: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 0 10px var(--background-min);
+body main section.about > .container .grid-container .data-self .xp .xp-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px 10px;
 }
-body main section.about .container .grid-container .data-self .xp .slides::before {
-  content: "";
-  position: absolute;
+body main section.about > .container .grid-container .data-self .xp .xp-container .pagination {
+  grid-column: 1/4;
+  width: 100%;
+}
+body main section.about > .container .grid-container .data-self .xp .xp-container .pagination ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+body main section.about > .container .grid-container .data-self .xp .xp-container .pagination ul li .progress-container {
+  width: 5px;
+  height: 50px;
+}
+body main section.about > .container .grid-container .data-self .xp .xp-container .pagination ul li .progress-container .progress-bar {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  background: url(../static/img/bg-value-lines.png) center no-repeat;
-  background-size: 100%;
-  opacity: 1;
-  transition: 300ms;
+  background: var(--skin-color);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 300ms ease-in-out, transform-origin 0ms;
 }
-body main section.about .container .grid-container .data-self .xp .slides:where(.next) {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  padding: 10px 5px;
-  font-size: 40px;
-  color: var(--skin-color);
-  font-size: 30px;
-  transition: 200ms;
-  user-select: none;
-  background: #000;
-}
-body main section.about .container .grid-container .data-self .xp .slides .prev,
-body main section.about .container .grid-container .data-self .xp .slides .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  padding: 10px 5px;
-}
-body main section.about .container .grid-container .data-self .xp .slides .prev:hover > i,
-body main section.about .container .grid-container .data-self .xp .slides .next:hover > i {
-  font-size: 40px;
-}
-body main section.about .container .grid-container .data-self .xp .slides .prev.blocked,
-body main section.about .container .grid-container .data-self .xp .slides .next.blocked {
-  opacity: 0.5;
-  pointer-events: none;
-}
-body main section.about .container .grid-container .data-self .xp .slides .prev i,
-body main section.about .container .grid-container .data-self .xp .slides .next i {
-  color: var(--skin-color);
-  font-size: 30px;
-  transition: 200ms;
-}
-body main section.about .container .grid-container .data-self .xp .slides .prev {
-  left: 10px;
-}
-body main section.about .container .grid-container .data-self .xp .slides .next {
-  right: 10px;
-}
-body main section.about .container .grid-container .data-self .xp .slides ul {
+body main section.about > .container .grid-container .data-self .xp .xp-container .pagination ul li span {
+  display: block;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  position: relative;
-  height: 190px;
-}
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 500ms 0ms;
-}
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag h4 {
   color: var(--skin-color);
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description {
+body main section.about > .container .grid-container .data-self .xp .xp-container .pagination ul li.active {
+  background: var(--background-max);
+}
+body main section.about > .container .grid-container .data-self .xp .xp-container .pagination ul li.active .progress-container .progress-bar {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+body main section.about > .container .grid-container .data-self .xp .xp-container .cards {
+  grid-column: 4/13;
+  width: 100%;
+}
+body main section.about > .container .grid-container .data-self .xp .xp-container .cards ul li {
+  padding: 20px;
+  display: none;
+}
+body main section.about > .container .grid-container .data-self .xp .xp-container .cards ul li h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+body main section.about > .container .grid-container .data-self .xp .xp-container .cards ul li h5 {
+  color: var(--skin-color);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
   display: flex;
+  align-items: center;
   gap: 20px;
 }
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body main section.about > .container .grid-container .data-self .xp .xp-container .cards ul li h5 i {
+  font-size: 1.8rem;
 }
-@media (max-width: 860px) {
-  body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description .icon {
-    display: none;
-    height: 200px;
-  }
+body main section.about > .container .grid-container .data-self .xp .xp-container .cards ul li h5 span {
+  letter-spacing: 1px;
+  font-weight: 900;
 }
-@media (max-width: 910px) {
-  body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description .icon {
-    display: block;
-  }
-}
-@media (max-width: 620px) {
-  body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description .icon {
-    display: none;
-  }
-}
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description .icon i {
-  color: var(--skin-color);
-  font-size: 5rem;
-}
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag .description p {
-  text-align: justify;
+body main section.about > .container .grid-container .data-self .xp .xp-container .cards ul li p {
   color: var(--text-sub);
+  text-align: justify;
 }
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag.toRightOld {
-  animation: toRightOld 500ms ease-in-out;
+body main section.about > .container .grid-container .data-self .xp .xp-container .cards ul li.active {
+  display: grid;
+  animation: appearFromLeft 600ms ease;
 }
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag.toRightNew {
-  animation: toRightNew 500ms ease-in-out;
+@keyframes appearFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag.toLeftOld {
-  animation: toLeftOld 500ms ease-in-out;
-}
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag.toLeftNew {
-  animation: toLeftNew 500ms ease-in-out;
-}
-body main section.about .container .grid-container .data-self .xp .slides .slides-pag.active {
-  opacity: 1;
-  transition: opacity 0ms 0ms;
-}
-body main section.about .container .grid-container .data-self .xp .slides .dots-container {
-  height: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body main section.about .container .grid-container .data-self .xp .slides .dots-container .dot {
-  width: 50px;
-  height: 5px;
-  background: var(--background-min);
-  cursor: pointer;
-  transition: 500ms;
-}
-body main section.about .container .grid-container .data-self .xp .slides .dots-container .dot.active {
-  background: var(--skin-color);
-}
-body main section.about .container .grid-container .hardSkills {
-  grid-column: 9/13;
-}
-@media (max-width: 1230px) {
-  body main section.about .container .grid-container .hardSkills {
+@media (max-width: 1040px) {
+  body main section.about > .container .grid-container .data-self .xp .xp-container .pagination,
+  body main section.about > .container .grid-container .data-self .xp .xp-container .cards {
     grid-column: 1/13;
   }
 }
-body main section.about .container .grid-container .hardSkills h3 {
+@media (max-width: 910px) {
+  body main section.about > .container .grid-container .data-self .xp .xp-container .pagination {
+    grid-column: 1/4;
+  }
+  body main section.about > .container .grid-container .data-self .xp .xp-container .cards {
+    grid-column: 4/13;
+  }
+}
+@media (max-width: 700px) {
+  body main section.about > .container .grid-container .data-self .xp .xp-container .pagination,
+  body main section.about > .container .grid-container .data-self .xp .xp-container .cards {
+    grid-column: 1/13;
+  }
+}
+body main section.about > .container .grid-container aside {
+  grid-column: 9/13;
+}
+@media (max-width: 1230px) {
+  body main section.about > .container .grid-container aside {
+    grid-column: 1/13;
+  }
+}
+body main section.about > .container .grid-container aside .technologies h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: var(--text-main);
+  text-align: center;
+}
+body main section.about > .container .grid-container aside .technologies ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 10px;
+  margin-bottom: 50px;
+}
+body main section.about > .container .grid-container aside .technologies ul li {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-max);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid var(--background-min);
+  transition: all 0.3s, border-color 3s;
+  position: relative;
+  top: 0;
+}
+body main section.about > .container .grid-container aside .technologies ul li:hover {
+  border-color: var(--text-sub);
+  transition: all 0.3s, border-color 0.2s;
+  box-shadow: 0 0 5px #fff;
+  top: -5px;
+}
+body main section.about > .container .grid-container aside .technologies ul li:hover .circle {
+  box-shadow: 0 0 5px #fff;
+  background: #fff;
+}
+body main section.about > .container .grid-container aside .technologies ul li:hover .name-skill {
+  display: block;
+  opacity: 1;
+}
+body main section.about > .container .grid-container aside .technologies ul li .circle {
+  background: var(--background-min);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  overflow: hidden;
+}
+body main section.about > .container .grid-container aside .technologies ul li .circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px #fff);
+}
+body main section.about > .container .grid-container aside .technologies ul li .name-skill {
+  position: absolute;
+  top: 100%;
+  padding: 5px;
+  border: var(--text-main);
+  background: var(--background-max);
+  display: none;
+  color: var(--text-main);
+  animation: Slowdown 0.3s forwards;
+  transition: transform 300ms;
+  border-radius: 5px;
+  z-index: 2;
+  border: 2px solid var(--skin-color);
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: bold;
+  min-width: 70px;
+}
+@keyframes Slowdown {
+  from {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(5px);
+    opacity: 1;
+  }
+}
+body main section.about > .container .grid-container aside .courses h3 {
   text-align: center;
   font-size: 30px;
   color: var(--text-main);
 }
-body main section.about .container .grid-container .hardSkills > span {
+body main section.about > .container .grid-container aside .courses > span {
   display: block;
   margin-bottom: 20px;
   color: var(--text-sub);
   text-align: center;
   font-weight: bold;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > h4 {
+body main section.about > .container .grid-container aside .courses #courses-container > h4 {
   margin-bottom: 10px;
   font-size: 20px;
   color: var(--skin-color);
   text-decoration: underline;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul {
+body main section.about > .container .grid-container aside .courses #courses-container > ul {
   margin-bottom: 15px;
   border-bottom: 1px solid var(--background-min);
   display: grid;
@@ -971,38 +1231,38 @@ body main section.about .container .grid-container .hardSkills #hardSkills-conta
   gap: 20px;
 }
 @media (max-width: 1230px) {
-  body main section.about .container .grid-container .hardSkills #hardSkills-container > ul {
+  body main section.about > .container .grid-container aside .courses #courses-container > ul {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 670px) {
-  body main section.about .container .grid-container .hardSkills #hardSkills-container > ul {
+  body main section.about > .container .grid-container aside .courses #courses-container > ul {
     grid-template-columns: 1fr;
   }
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li {
   position: relative;
   margin-bottom: 25px;
   grid-column: 1fr;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .name-percent {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
   position: relative;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(1) {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .name-percent span:nth-child(1) {
   font-weight: 900;
   color: var(--text-main);
   cursor: pointer;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(1):hover ~ .details {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .name-percent span:nth-child(1):hover ~ .details {
   visibility: visible;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent span:nth-child(3) {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .name-percent span:nth-child(3) {
   color: var(--text-sub);
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent .details {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .name-percent .details {
   position: absolute;
   visibility: hidden;
   top: 220%;
@@ -1012,10 +1272,9 @@ body main section.about .container .grid-container .hardSkills #hardSkills-conta
   border: 2px solid var(--text-main);
   padding: 10px;
   border-radius: 10px;
-  text-align: justify;
   transition: none;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .name-porcent .details::before {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .name-percent .details::before {
   position: absolute;
   content: "";
   width: 0px;
@@ -1026,21 +1285,21 @@ body main section.about .container .grid-container .hardSkills #hardSkills-conta
   top: 0;
   transform: translateY(-100%);
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .progress-bar {
   width: 100%;
   height: 10px;
   background: var(--background-min);
   overflow: hidden;
   border-radius: 50px;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .progress-bar .progress-value {
   background: var(--skin-color);
   height: 100%;
   position: relative;
   display: flex;
   align-items: center;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::after, body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::before {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .progress-bar .progress-value::after, body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .progress-bar .progress-value::before {
   content: "";
   background: var(--skin-color);
   position: absolute;
@@ -1048,14 +1307,14 @@ body main section.about .container .grid-container .hardSkills #hardSkills-conta
   transform-origin: center;
   transition: 300ms;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::after {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .progress-bar .progress-value::after {
   animation: flip 1.5s infinite linear;
   width: 35px;
   height: 35px;
   border-radius: 35%;
   opacity: 0.5;
 }
-body main section.about .container .grid-container .hardSkills #hardSkills-container > ul li .progress .progress-bar .progress-value::before {
+body main section.about > .container .grid-container aside .courses #courses-container > ul li .progress .progress-bar .progress-value::before {
   animation: flip 2s infinite reverse linear;
   width: 30px;
   height: 30px;
@@ -1550,20 +1809,34 @@ body main section.contact form .button {
   align-items: center;
   grid-column: 1/3;
 }
+@media (max-width: 910px) {
+  body main section.contact form .button button {
+    width: 100%;
+  }
+}
 body main section.contact form .button button {
-  width: 250px;
   width: 50%;
   height: 50px;
   border-radius: 100px;
-  border: 2px solid #757575;
-  background: var(--background-min);
-  color: var(--text-main);
+  border: 2px solid var(--skin-color);
+  background: var(--background-max);
+  color: var(--skin-color);
   font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 body main section.contact form .button button:hover {
-  border: 2px solid var(--background-min);
   background: var(--skin-color);
+  border: 2px solid var(--background-min);
   color: white;
+}
+@media (max-width: 910px) {
+  body main section.contact form .button {
+    padding-bottom: 50px;
+  }
+  body main section.contact form .button button {
+    width: 100%;
+  }
 }
 body.dark {
   --background-middle: #151515;
