@@ -7,7 +7,7 @@ export const Projects = [
 			"CSS",
 			"Java Script"
 		],
-		description: "One of my first projects, made using more basic skills trying to imitate something I saw in a post and also asking a certain person to date.",
+		description: "Um dos meus primeiros projetos, feito usando habilidades mais básicas tentando imitar algo que vi em um postagem",
 		repository: "flirt-me",
 		pages: "https://lorsuz.github.io/flirt-me/"
 	},
@@ -19,7 +19,7 @@ export const Projects = [
 			"Bootstrap",
 			"Java Script"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "Um simples projeto para gerenciamento financeiro fazendo uso de tecnologias básicas e meu primeiro framework para CSS",
 		repository: "financial-control",
 		pages: "https://lorsuz.github.io/financial-control/"
 	},
@@ -32,7 +32,7 @@ export const Projects = [
 			"Java Script",
 			"JQuery"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "Meu primeiro projeto feito por encomenda, Projeto utilizado para apresentação de um seminário sobre o autor Monteiro Lobato",
 		repository: "a-negrinha",
 		pages: "https://lorsuz.github.io/a-negrinha/"
 	},
@@ -44,7 +44,7 @@ export const Projects = [
 			"CSS",
 			"Java Script"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "",
 		repository: "divertidamente",
 		pages: "https://lorsuz.github.io/divertidamente/"
 	},
@@ -55,7 +55,7 @@ export const Projects = [
 			"HTML",
 			"CSS"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "Nesse projeto apliquei minhas habilidades de fazer interfaces de alta fidelidade ao copiar com 100% de fidelidade um design feito no figma.",
 		repository: "wooshol",
 		pages: "https://lorsuz.github.io/wooshol/"
 	},
@@ -69,8 +69,8 @@ export const Projects = [
 			"PHP",
 			"MYSQL"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-		repository: "walltitles",
+		description: "Projeto idealizado para ser um lugar onde se pode anotar todas as suas obras assistidas, lidas ou conhecidas para gerenciamento próprio",
+		repository: "",
 		pages: ""
 	},
 	{
@@ -78,21 +78,22 @@ export const Projects = [
 		image: "sano.png",
 		skills: [
 			"HTML",
-			"CSS"
+			"CSS",
+			"Java Script"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-		repository: "sano",
+		description: "Feito para um mestre de uma mesa de RPG com o objetivo de ser um aplicativo para gerenciar as informações dos jogadores de forma mais fácil e eficiente.",
+		repository: "",
 		pages: ""
 	},
 	{
-		project: "Idonesia 77 years",
+		project: "Indonesia 77 years",
 		image: "idonesia77.png",
 		skills: [
 			"HTML",
 			"CSS"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-		repository: "idonesia77",
+		description: "Site feito para comemorar os 77 anos de independência da Indonésia.",
+		repository: "",
 		pages: ""
 	},
 	{
@@ -102,8 +103,8 @@ export const Projects = [
 			"HTML",
 			"CSS"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-		repository: "noticia-cidade",
+		description: "Um site de notícias para para treinar habilidades de posicionamento de elementos na página",
+		repository: "",
 		pages: ""
 	},
 	{
@@ -114,8 +115,8 @@ export const Projects = [
 			"APIrest",
 			"SASS"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-		repository: "weather-app",
+		description: "Um pagina em React.js com conexão de API para fornecer dados sobre o clima de diversas localizações.",
+		repository: "",
 		pages: ""
 	},
 	{
@@ -123,10 +124,11 @@ export const Projects = [
 		image: "mata-mosquito.png",
 		skills: [
 			"HTML",
-			"CSS"
+			"CSS",
+			"Java Script"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
-		repository: "mata-mosquito",
+		description: "Jogo Feito 100% em Java Script para fortalecimento e aprendizagem mais profunda sobre programação Web",
+		repository: "",
 		pages: ""
 	},
 	{
@@ -134,9 +136,10 @@ export const Projects = [
 		image: "progress-circle.png",
 		skills: [
 			"HTML",
-			"CSS"
+			"CSS",
+			"Java Script",
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "Site que recebe um valor entre 1 e 100 e o revela na tela na forma de barras de progresso circular.",
 		repository: "progress-circle",
 		pages: "progress-circle"
 	},
@@ -145,9 +148,11 @@ export const Projects = [
 		image: "mr-pet.png",
 		skills: [
 			"REACT",
-			"SASS"
+			"SASS",
+			"Node.JS",
+			"SQLite"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "Site feito para auxiliar no gerenciamento de uma loja veterinária, com painel de produtos e agendamento de tosas",
 		repository: "",
 		pages: ""
 	},
@@ -158,7 +163,7 @@ export const Projects = [
 			"HTML",
 			"CSS"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "Site que gera números aleatórios que entre 1 e 100 e são apresentados na tela na forma de barras de progresso",
 		repository: "",
 		pages: ""
 	},
@@ -173,7 +178,7 @@ export const Projects = [
 			"Express",
 			"SQLite"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "Site feito para reunir noticias sobre determinado nicho e mostra-las em um so lugar, com autenticação e CRUD de varias tabelas.",
 		repository: "",
 		pages: ""
 	},
@@ -187,7 +192,7 @@ export const Projects = [
 			"PHP",
 			"MYSQL"
 		],
-		description: "Lorem ipsum dolor sit amet consectetur icing elit. Molestias velit voluptates aut, consectetur ullam est expedita placeat sapiente quidem nihild.",
+		description: "Jogo feito para ser uma versão digital do banco imobiliário convencional feito em js usando o canvas.",
 		repository: "",
 		pages: ""
 	}

@@ -498,7 +498,7 @@ body main section > .container {
   min-height: 700px;
   max-width: 1650px;
   margin: 50px auto 0;
-  padding: 0px 10px 100px 10px;
+  padding: 0px 10px 100px 0px;
 }
 @media (max-width: 910px) {
   body main section > .container {

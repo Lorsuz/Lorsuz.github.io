@@ -595,7 +595,7 @@ body {
 				min-height: 700px;
 				max-width: 1650px;
 				margin: 50px auto 0;
-				padding: 0px 10px 100px 10px;
+				padding: 0px 10px 100px 0px;
 
 				@media (max-width: $hideAside) {
 					padding: 0px 0px 100px;
@@ -1219,7 +1219,6 @@ body {
 												gap: 15px;
 												cursor: pointer;
 												border-radius: 0 5px 5px 0;
-
 
 												.progress-container {
 													width: 5px;

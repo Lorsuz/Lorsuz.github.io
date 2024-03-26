@@ -1,62 +1,57 @@
 export const Services = [
 	{
-		service: "Front End Web Development",
+		service: "Desenvolvimento Front End",
 		icon: "desktop",
-		description: "Create beautiful and interactive user interfaces for websites and web applications."
+		description: "Desenvolvo interfaces de usuário bonitas e interativas para aplicações web"
 	},
 	{
-		service: "Back End Web Development",
+		service: "Desenvolvimento Back End",
 		icon: "server",
-		description: "Build the server-side logic and databases that power web applications."
+		description: "Construo a lógica e a conexão de bancos de dados do lado do servidor para alimentação dos aplicativos da web"
 	},
 	{
-		service: "Full Stack Web Development",
+		service: "Desenvolvimento Full Stack",
 		icon: "laptop-code",
-		description: "Combine front-end and back-end skills to develop complete web solutions."
+		description: "Combino habilidades de front-end e back-end para desenvolver soluções web completas"
 	},
 	{
 		service: "UI/UX Web Design",
 		icon: "paint-brush",
-		description: "Create user-friendly and visually appealing web interfaces for a great user experience."
+		description: "Posso criar interfaces web fáceis de usar e visualmente atraentes para uma ótima experiência do usuário"
 	},
 	{
-		service: "Code Refactoring",
+		service: "Refatoração de Código",
 		icon: "code",
-		description: "Optimize and improve existing codebases for better performance and maintainability."
+		description: "Otimizo e melhoro bases de código existentes para melhor desempenho e capacidade de manutenção"
 	},
 	{
-		service: "Open Source Contributions",
+		service: "Contribuições Open Source",
 		icon: "code-branch",
-		description: "Contribute to open-source projects and collaborate with the developer community."
+		description: "Contribuo em projetos de código aberto e colaboro com a comunidade de desenvolvedores"
 	},
 	{
-		service: "Database Design and Management",
+		service: "Design e Gerenciamento de Database",
 		icon: "database",
-		description: "Design and manage databases for efficient data storage and retrieval."
+		description: "Projeto e gerencio bancos de dados para armazenamento e recuperação eficiente de dados"
 	},
 	{
 		service: "API Development",
 		icon: "cogs",
-		description: "Create APIs to enable communication and data exchange between different software systems."
+		description: "Crie APIs para permitir a comunicação e troca de dados entre diferentes sistemas de software"
 	},
 	{
-		service: "Quality Assurance and Testing",
+		service: "Garantia de Qualidade e Testes",
 		icon: "bug",
-		description: "Ensure the quality and reliability of software through testing and quality assurance processes."
+		description: "Garanto a qualidade e confiabilidade do aplicativo por meio de testes e garantia de qualidade de processos"
 	},
 	{
-		service: "Technical Writing",
+		service: "Documentação técnica",
 		icon: "file-alt",
-		description: "Produce technical documentation, manuals, and articles to support software projects."
+		description: "Produzo documentação técnica e manuais para apoiar projetos de software"
 	},
 	{
-		service: "Consulting and Training",
-		icon: "users",
-		description: "Offer technical consulting and training services to individuals and businesses."
-	},
-	{
-		service: "School Activity Coding",
+		service: "Codificação de Atividades Técnicas",
 		icon: "school",
-		description: "Develop code and software solutions for school projects and activities."
+		description: "Desenvolvo soluções de código e software para projetos e atividades Técnicas"
 	}
-]
+];

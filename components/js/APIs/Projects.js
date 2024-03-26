@@ -2,7 +2,7 @@ import { Projects } from "../exports/Projects.js";
 
 import { Consumer } from "../classes/Consumer.js";
 
-let contentTemplate = (object) => `
+let contentTemplate = ( object ) => `
 <li class="card">
 	<div class="img">
 		<img src="components/static/img/projects/${ object.image }" alt="${ object.image }">
@@ -11,30 +11,30 @@ let contentTemplate = (object) => `
 		<div class="details">
 		<h3>${ object.project }</h3>
 			<div class="skill-tags">${ object.skills.map( ( skill ) => {
-					return `<span class="tag">${ skill }</span>`;
-					} ).join( "" )
-				}
+	return `<span class="tag">${ skill }</span>`;
+} ).join( "" )
+	}
 			</div>
 			<p>${ object.description }</p>
 			<div class="links">
 			${ object.repository ?
-				`<a href="https://github.com/Lorsuz/${ object.repository }" target="_blank">Repository</a>` :
-				""
-			}
+		`<a href="https://github.com/Lorsuz/${ object.repository }" target="_blank">Repositório</a>` :
+		""
+	}
 			
 			${ object.pages ?
-				`<a href="${ object.pages }" target="_blank">Web Site</a>` :
-				""
-			}
+		`<a href="${ object.pages }" target="_blank">Web Site</a>` :
+		""
+	}
 
 			${ !object.pages && !object.repository ?
-				`<span>There're no links available for this project yet!!</span>` :
-				""
-			}
+		`<span>There're no links available for this project yet!!</span>` :
+		""
+	}
 			</div>
 		</div>
 	</div>
 </li>
 `;
 
-new Consumer("#projects-container", contentTemplate, Projects);
+new Consumer( "#projects-container", contentTemplate, Projects );
