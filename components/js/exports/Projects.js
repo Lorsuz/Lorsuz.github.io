@@ -141,7 +141,7 @@ export const Projects = [
 		],
 		description: "Site que recebe um valor entre 1 e 100 e o revela na tela na forma de barras de progresso circular",
 		repository: "progress-circle",
-		pages: "progress-circle"
+		pages: "https://lorsuz.github.io/progress-circle"
 	},
 	{
 		project: "Mr. Pet",

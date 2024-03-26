@@ -33,6 +33,8 @@ export const HardSkills = [
 	{ skill: "Firebase.png", skillName: "" },
 	{ skill: "Node-Js.png", skillName: "" },
 	{ skill: "Rest-API.png", skillName: "" },
+	{ skill: "Prisma.png", skillName: "" },
+	{ skill: "ESLint.png", skillName: "" },
 	{ skill: "SQLite.png", skillName: "" },
 	{ skill: "React.png", skillName: "" },
 	{ skill: "PostgreSQL.png", skillName: "" },
@@ -46,8 +48,8 @@ export const HardSkills = [
 	{ skill: "RPG-Maker.png", skillName: "" },
 	{ skill: "Brave.png", skillName: "" },
 	{ skill: "Chrome.png", skillName: "" },
-	
-	
+
+
 	// So vi o basico de como se usa nunca apliquei na pratica
 	// { skill: "Arduino.png", skillName: "" },
 	// { skill: "DotNET.png", skillName: ".NET" },
