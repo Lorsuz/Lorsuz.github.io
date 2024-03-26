@@ -2,6 +2,7 @@ class Mode {
 	times = 1;
 
 	constructor ( button ) {
+
 		this.defineElements( button );
 		this.initBooleanDark();
 	}
@@ -22,10 +23,10 @@ class Mode {
 
 	toggleMode () {
 		this.dark = this.toggleIconAndTheme();
-		if ( document.cookie.indexOf( "acceptedCookies=true" ) !== -1 )	
-			localStorage.setItem( 'dark', this.dark );
-		else
-			sessionStorage.removeItem('dark');
+		document.cookie.indexOf( "acceptedCookies=true" ) !== -1
+			? localStorage.setItem( 'dark', this.dark )
+			: localStorage.removeItem( 'dark' );
+
 	}
 
 	toggleIconAndTheme () {

@@ -17,5 +17,7 @@ import "./events/Slide.js";
 // import "./classes/Mode.js";
 import "./classes/Section.js";
 
-
-
+if ( document.cookie.indexOf( "acceptedCookies=true" ) === -1 ) {
+	localStorage.removeItem( 'dark' );
+	localStorage.removeItem( 'color' );
+}

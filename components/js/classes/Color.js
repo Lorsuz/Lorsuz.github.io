@@ -21,10 +21,10 @@ class Color {
 	}
 
 	changeColor () {
-		if ( document.cookie.indexOf( "acceptedCookies=true" ) !== -1 )
-			localStorage.setItem( 'color', this.valueColor );
-		else
-			sessionStorage.removeItem('color');
+		document.cookie.indexOf( "acceptedCookies=true" ) !== -1
+			? localStorage.setItem( 'color', this.valueColor )
+			: localStorage.removeItem( 'color' );
+
 		this.body.style.setProperty( this.rootVar, this.valueColor );
 	}
 }

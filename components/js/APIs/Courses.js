@@ -5,7 +5,7 @@ import { Consumer } from "../classes/Consumer.js";
 var itemCurrent = 0;
 var sectionIndex = 0;
 var sections = [ "Concluído", "Cursando", "Hobby" ];
-var newUlStart = [ 0, 3, 8 ];
+var newUlStart = [ 0, 3, 7 ];
 
 Courses.map( ( course ) => {
 

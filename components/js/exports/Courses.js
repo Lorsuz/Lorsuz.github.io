@@ -15,11 +15,6 @@ export const Courses = [
 		details: "Curso em Vídeo, Gustavo Guanabara"
 	},
 	{
-		name: "Técnico de Informática",
-		percent: 95,
-		details: "IFPB, 3500H"
-	},
-	{
 		name: "React.Js e Next.Js",
 		percent: 60,
 		details: "Udemy, 100H"

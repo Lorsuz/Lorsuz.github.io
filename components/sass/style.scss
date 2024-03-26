@@ -595,7 +595,12 @@ body {
 				min-height: 700px;
 				max-width: 1650px;
 				margin: 50px auto 0;
-				padding: 0px 0 100px;
+				padding: 0px 10px 100px 10px;
+
+				@media (max-width: $hideAside) {
+					padding: 0px 0px 100px;
+
+				}
 
 				> h1 {
 					font-size: 40px;
@@ -650,7 +655,9 @@ body {
 					position: relative;
 					min-height: 100hv;
 					margin: 0;
-					padding: 0;
+					padding-bottom: 0;
+
+					@media (max-width: $hideAside) {}
 
 					@media (max-width:$hideAside) {
 						padding-top: 200px;
@@ -1475,12 +1482,23 @@ body {
 									font-weight: bold;
 								}
 
+
+
 								#courses-container {
 									> h4 {
 										margin-bottom: 10px;
 										font-size: 20px;
 										color: var(--skin-color);
 										text-decoration: underline;
+									}
+
+									> :nth-child(1),
+									> :nth-child(2) {
+										display: none;
+
+										@media (max-width: $hideAside) {
+											display: grid;
+										}
 									}
 
 									> ul {
@@ -1497,6 +1515,8 @@ body {
 										@media (max-width:670px) {
 											grid-template-columns: 1fr;
 										}
+
+
 
 										li {
 											position: relative;
@@ -1541,6 +1561,7 @@ body {
 														padding: 10px;
 														border-radius: 10px;
 														transition: none;
+														font-size: 0.9rem;
 
 														&::before {
 															position: absolute;
