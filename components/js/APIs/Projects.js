@@ -28,7 +28,7 @@ let contentTemplate = ( object ) => `
 	}
 
 			${ !object.pages && !object.repository ?
-		`<span>There're no links available for this project yet!!</span>` :
+		`<span>Ainda não há links disponíveis para este projeto!!</span>` :
 		""
 	}
 			</div>
