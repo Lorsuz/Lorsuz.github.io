@@ -92,7 +92,7 @@ export const Projects = [
 			"HTML",
 			"CSS"
 		],
-		description: "Site feito para comemorar os 77 anos de independência da Indonésia",
+		description: "Site feito para comemorar os 77 anos de independência da Indonésia, fazendo uso de tecnologias básicas",
 		repository: "",
 		pages: ""
 	},
@@ -103,7 +103,7 @@ export const Projects = [
 			"HTML",
 			"CSS"
 		],
-		description: "Um site de notícias para para treinar habilidades de posicionamento de elementos na página",
+		description: "Um site de notícias para para treinar habilidades de posicionamento de elementos na página usando tecnologias básicas",
 		repository: "",
 		pages: ""
 	},
@@ -115,7 +115,7 @@ export const Projects = [
 			"APIrest",
 			"SASS"
 		],
-		description: "Um pagina em React.js com conexão de API para fornecer dados sobre o clima de diversas localizações",
+		description: "Um pagina em React.js com conexão de API que consome dados sobre o clima de diversas localizações",
 		repository: "",
 		pages: ""
 	},
