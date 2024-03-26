@@ -44,7 +44,7 @@ export const Projects = [
 			"CSS",
 			"Java Script"
 		],
-		description: "",
+		description: "Projeto feito por encomenda, utilizado para apresentação de um seminário sobre o longa metragem Divertidamente da Disney e seu significado",
 		repository: "divertidamente",
 		pages: "https://lorsuz.github.io/divertidamente/"
 	},
@@ -55,7 +55,7 @@ export const Projects = [
 			"HTML",
 			"CSS"
 		],
-		description: "Nesse projeto apliquei minhas habilidades de fazer interfaces de alta fidelidade ao copiar com 100% de fidelidade um design feito no figma.",
+		description: "Nesse projeto apliquei minhas habilidades de fazer interfaces de alta fidelidade ao copiar com 100% de fidelidade um design feito no figma",
 		repository: "wooshol",
 		pages: "https://lorsuz.github.io/wooshol/"
 	},
@@ -81,7 +81,7 @@ export const Projects = [
 			"CSS",
 			"Java Script"
 		],
-		description: "Feito para um mestre de uma mesa de RPG com o objetivo de ser um aplicativo para gerenciar as informações dos jogadores de forma mais fácil e eficiente.",
+		description: "Feito para um mestre de uma mesa de RPG com o objetivo de ser um aplicativo para gerenciar as informações dos jogadores de forma mais fácil e eficiente",
 		repository: "",
 		pages: ""
 	},
@@ -92,7 +92,7 @@ export const Projects = [
 			"HTML",
 			"CSS"
 		],
-		description: "Site feito para comemorar os 77 anos de independência da Indonésia.",
+		description: "Site feito para comemorar os 77 anos de independência da Indonésia",
 		repository: "",
 		pages: ""
 	},
@@ -115,7 +115,7 @@ export const Projects = [
 			"APIrest",
 			"SASS"
 		],
-		description: "Um pagina em React.js com conexão de API para fornecer dados sobre o clima de diversas localizações.",
+		description: "Um pagina em React.js com conexão de API para fornecer dados sobre o clima de diversas localizações",
 		repository: "",
 		pages: ""
 	},
@@ -139,7 +139,7 @@ export const Projects = [
 			"CSS",
 			"Java Script",
 		],
-		description: "Site que recebe um valor entre 1 e 100 e o revela na tela na forma de barras de progresso circular.",
+		description: "Site que recebe um valor entre 1 e 100 e o revela na tela na forma de barras de progresso circular",
 		repository: "progress-circle",
 		pages: "progress-circle"
 	},
@@ -178,7 +178,7 @@ export const Projects = [
 			"Express",
 			"SQLite"
 		],
-		description: "Site feito para reunir noticias sobre determinado nicho e mostra-las em um so lugar, com autenticação e CRUD de varias tabelas.",
+		description: "Site feito para reunir noticias sobre determinado nicho e mostra-las em um so lugar, com autenticação e CRUD de varias tabelas",
 		repository: "",
 		pages: ""
 	},
@@ -192,7 +192,7 @@ export const Projects = [
 			"PHP",
 			"MYSQL"
 		],
-		description: "Jogo feito para ser uma versão digital do banco imobiliário convencional feito em js usando o canvas.",
+		description: "Jogo feito para ser uma versão digital do banco imobiliário convencional feito em js usando o canvas",
 		repository: "",
 		pages: ""
 	}
