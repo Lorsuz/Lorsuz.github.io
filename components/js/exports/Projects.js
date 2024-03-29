@@ -1,5 +1,16 @@
 export const Projects = [
 	{
+		project: "Acadêmicos de Santa Cruz",
+		image: "gresasc.png",
+		skills: [
+			"TSX",
+			"Express JS",
+			"MongoDB"
+		],
+		description: "Desenvolvendo um site institucional mixado com um e-commerce, para fornecer e automatizar o gerenciamento de associados e produtos da loja",
+		repository: "gresasc",
+		pages: ""
+	}, {
 		project: "Flirt-me",
 		image: "flirt-me.png",
 		skills: [

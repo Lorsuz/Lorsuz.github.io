@@ -1665,6 +1665,7 @@ body main section.projects #projects-container .card .details p {
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 70px;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 body main section.projects #projects-container .card .details .links {
