@@ -654,7 +654,7 @@ body {
 					align-items: center;
 					position: relative;
 					min-height: 100hv;
-					margin: 0;
+					margin: 0 auto;
 					padding-bottom: 0;
 
 					@media (max-width: $hideAside) {}
@@ -1712,6 +1712,10 @@ body {
 					align-items: center;
 					justify-content: center;
 					gap: 20px;
+
+					@media (min-width: 1500px) {
+						grid-template-columns: repeat(3, minmax(320px, 1fr));
+					}
 
 					li {
 						height: 150px;
