@@ -10,6 +10,17 @@ export const Projects = [
 		description: "Desenvolvendo um site institucional mixado com um e-commerce, para fornecer e automatizar o gerenciamento de associados e produtos da loja",
 		repository: "gresasc",
 		pages: ""
+	},{
+		project: "Hosting App",
+		image: "hosting.png",
+		skills: [
+			"TypeScript",
+			"Next JS",
+			"ApiRest"
+		],
+		description: "Projeto privado vendido para um cliente, um site de hospedagem de sites com painel de controle e gerenciamento de produtos de hosting e um blog",
+		repository: "",
+		pages: ""
 	}, {
 		project: "Flirt-me",
 		image: "flirt-me.png",
