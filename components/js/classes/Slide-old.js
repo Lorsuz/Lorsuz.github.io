@@ -19,7 +19,7 @@ this.dots = document.querySelectorAll( dots );
 for ( let index = 0; index < this.dots.length; index++ ) {
 this.dots[ index ].addEventListener( "click", () => {
 this.removeAnimation();
-this.animationEffect( this.slideCurrent, index );
+this.animationEffect( this.slideCurrent, index );		
 this.changeSlideCurrent( index );
 } );
 }

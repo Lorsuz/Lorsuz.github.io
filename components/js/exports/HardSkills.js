@@ -53,7 +53,7 @@ export const HardSkills = [
 	{ skill: "Chrome.png", skillName: "" },
 
 
-	// So vi o basico de como se usa nunca apliquei na pratica
+	// So vi o básico de como se usa nunca apliquei de verdade
 	// { skill: "Arduino.png", skillName: "" },
 	// { skill: "DotNET.png", skillName: ".NET" },
 	// { skill: "WordPress.png", skillName: "" },
